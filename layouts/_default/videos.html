@@ -1,14 +1,26 @@
 {{ define "main" }}
-<div class="page-top-pad">
-  <div class="container">
 
-    <div class="page-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 2rem;">
-      <p class="section-label">Watch</p>
-      <h1>Videos</h1>
-      <p style="color: var(--text-muted); max-width: 55ch; margin-top: 0.75rem;">
-        Official music videos, lyric videos, and live performances.
-      </p>
-    </div>
+<!-- ── Video hero — Old Mick ─────────────────────────────────── -->
+<div class="podcast-hero">
+  <div class="podcast-hero-video">
+    <iframe
+      src="https://www.youtube.com/embed/JFr9pm9NyPE?autoplay=1&mute=1&loop=1&playlist=JFr9pm9NyPE&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1"
+      title="Old Mick — Pressgang Mutiny"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <div class="video-hero-overlay"></div>
+  <div class="podcast-hero-content">
+    <p class="section-label">Watch</p>
+    <h1>Videos</h1>
+    <p class="podcast-hero-desc">Official music videos, lyric videos, and live performances.</p>
+  </div>
+</div>
+
+<div style="padding-block: clamp(3rem, 8vw, 5rem);">
+  <div class="container">
 
     <!-- Official Music Videos -->
     <div style="margin-bottom: 3.5rem;">
@@ -44,28 +56,6 @@
     <div style="margin-bottom: 3.5rem;">
       <h2 style="margin-bottom: 1.5rem;">Lyric Videos</h2>
       <div class="video-featured-grid">
-
-        <a href="https://www.youtube.com/watch?v=5rgx1qSsYqs" target="_blank" rel="noopener" class="video-card">
-          <div class="video-card-thumb">
-            <img src="https://img.youtube.com/vi/5rgx1qSsYqs/hqdefault.jpg" alt="Old Mick — Lyric Video" loading="lazy">
-            <span class="video-card-play">&#9654;</span>
-          </div>
-          <div class="video-card-info">
-            <h3>Old Mick</h3>
-            <p>from <em>Departure</em></p>
-          </div>
-        </a>
-
-        <a href="https://www.youtube.com/watch?v=8I2AstD2d-k" target="_blank" rel="noopener" class="video-card">
-          <div class="video-card-thumb">
-            <img src="https://img.youtube.com/vi/8I2AstD2d-k/hqdefault.jpg" alt="Jutland (Battle Of) — Lyric Video" loading="lazy">
-            <span class="video-card-play">&#9654;</span>
-          </div>
-          <div class="video-card-info">
-            <h3>Jutland (Battle Of)</h3>
-            <p>from <em>Pressgang Mutiny</em></p>
-          </div>
-        </a>
 
         <a href="https://www.youtube.com/watch?v=MMgKcVcvIx8" target="_blank" rel="noopener" class="video-card">
           <div class="video-card-thumb">

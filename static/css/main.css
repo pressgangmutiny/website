@@ -477,7 +477,15 @@ section {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, var(--bg) 15%, rgba(12,10,8,0.6) 60%, rgba(12,10,8,0.3) 100%);
+  background: linear-gradient(to top, var(--bg) 10%, rgba(12,10,8,0.25) 45%, rgba(12,10,8,0.1) 100%);
+}
+
+/* Video page hero — Old Mick is already dark, minimal overlay */
+.video-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, var(--bg) 8%, rgba(12,10,8,0.15) 40%, transparent 100%);
 }
 
 .podcast-hero-content {
