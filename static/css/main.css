@@ -1192,6 +1192,30 @@ section {
   .epk-photos { grid-template-columns: 1fr; }
 }
 
+/* ── Photo vignette ─────────────────────────────────────────── */
+.about-image,
+.aig-main,
+.aig-secondary > div,
+.aig-wide,
+.photo-gallery__item,
+.epk-photo,
+.member-photo {
+  position: relative;
+}
+.about-image::after,
+.aig-main::after,
+.aig-secondary > div::after,
+.aig-wide::after,
+.photo-gallery__item::after,
+.epk-photo::after,
+.member-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 40px 15px var(--bg);
+  pointer-events: none;
+}
+
 /* ── Utility ─────────────────────────────────────────────────── */
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
