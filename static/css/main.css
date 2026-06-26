@@ -1203,8 +1203,7 @@ section {
 .aig-wide,
 .photo-gallery__item,
 .epk-photo,
-.member-photo,
-.video-card-thumb {
+.member-photo {
   position: relative;
 }
 .about-image::after,
@@ -1213,8 +1212,7 @@ section {
 .aig-wide::after,
 .photo-gallery__item::after,
 .epk-photo::after,
-.member-photo::after,
-.video-card-thumb::after {
+.member-photo::after {
   content: '';
   position: absolute;
   inset: 0;
