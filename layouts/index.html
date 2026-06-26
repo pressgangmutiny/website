@@ -1,0 +1,204 @@
+{{ define "main" }}
+
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Pressgang<br>Mutiny</h1>
+    <p class="hero-tagline">Toronto's Shantymen</p>
+    <p class="hero-subtagline">Redefining sea shanties</p>
+    <p class="hero-eyebrow">New Single — Out Now</p>
+    <div class="hero-actions">
+      <a href="https://lnk.to/pgmhillgullysally" target="_blank" rel="noopener" class="btn btn-primary">Hill and Gully / Sally Rackett</a>
+      <a href="{{ "tour/" | relURL }}" class="btn btn-outline">2026 UK Tour</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="{{ "img/band-hero.jpg" | relURL }}" alt="Pressgang Mutiny performing live" loading="eager">
+  </div>
+</section>
+
+<!-- ── Rope divider ───────────────────────────────────────────── -->
+<div class="rope-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 12" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,6 C50,2 100,10 150,6 C200,2 250,10 300,6 C350,2 400,10 450,6 C500,2 550,10 600,6 C650,2 700,10 750,6 C800,2 850,10 900,6 C950,2 1000,10 1050,6 C1100,2 1150,10 1200,6" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+    <path d="M0,6 C50,10 100,2 150,6 C200,10 250,2 300,6 C350,10 400,2 450,6 C500,10 550,2 600,6 C650,10 700,2 750,6 C800,10 850,2 900,6 C950,10 1000,2 1050,6 C1100,10 1150,2 1200,6" fill="none" stroke="var(--accent)" stroke-width="0.8" stroke-opacity="0.5"/>
+  </svg>
+</div>
+
+<!-- ── Latest release ─────────────────────────────────────────── -->
+<section style="background: var(--bg-card);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="{{ "img/departure-cover.jpg" | relURL }}" alt="Departure album cover — Pressgang Mutiny" loading="lazy">
+      </div>
+      <div class="about-text">
+        <p class="section-label">Latest Release</p>
+        <h2>Departure</h2>
+        <p class="lead">Our latest project draws connections between sea shanties, Hip Hop, Soca, Reggae, and Dance Hall — the genres that share the same social, rhythmic, and communal roots. We believe <em>Departure</em> represents a first step in restoring our tradition's multicultural, trans-Atlantic origins.</p>
+        <p>Featuring collaborations with Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins of Big Sugar, Toronto Hip Hop artist Matt Somber, Reggae MC Sunray Grennan, and many other great musicians we're privileged to share a city with.</p>
+        <div class="hero-actions mt-4">
+          <a href="https://pressgangmutiny.bandcamp.com/album/departure" target="_blank" rel="noopener" class="btn btn-primary">Buy / Stream</a>
+          <a href="{{ "music/" | relURL }}" class="btn btn-outline">All Releases</a>
+        </div>
+      </div>
+    </div>
+    <!-- Spotify player -->
+    <div style="margin-top: 2.5rem;">
+      <iframe style="border-radius:12px; border:none;" src="https://open.spotify.com/embed/album/2RKvMBaolLMkxKe3yEkgOG?utm_source=generator&theme=0" width="100%" height="152" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ── Press quotes ────────────────────────────────────────────── -->
+<section class="quotes-section">
+  <div class="container">
+    <div class="quotes-rotating" id="quotes-rotator">
+      <blockquote class="rotating-quote active">
+        <p class="rotating-quote-text">"Sailing centuries-old songs straight into the modern world."</p>
+        <cite class="rotating-quote-cite">Music Crowns</cite>
+      </blockquote>
+      <blockquote class="rotating-quote">
+        <p class="rotating-quote-text">"Now here's a crew I would sign on with."</p>
+        <cite class="rotating-quote-cite">David Francey</cite>
+      </blockquote>
+      <blockquote class="rotating-quote">
+        <p class="rotating-quote-text">"If you enjoy the likes of Kimber's Men, you'll have an absolute whale of a time."</p>
+        <cite class="rotating-quote-cite">Shire Folk</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+<script>
+(function() {
+  var quotes = document.querySelectorAll('.rotating-quote');
+  var idx = 0;
+  setInterval(function() {
+    quotes[idx].classList.remove('active');
+    idx = (idx + 1) % quotes.length;
+    quotes[idx].classList.add('active');
+  }, 5000);
+})();
+</script>
+
+<!-- ── Tour preview ───────────────────────────────────────────── -->
+<section style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <p class="section-label">Next Port of Call</p>
+    <h2 style="margin-bottom: 2rem;">Upcoming Shows</h2>
+    <div style="margin-bottom: 2rem;">
+      <div id="bit-events-widget-home">
+        <a class="bit-widget-initializer"
+           data-artist-name="Pressgang Mutiny"
+           data-display-local-dates="false"
+           data-display-past-dates="false"
+           data-auto-style="false"
+           data-text-color="#e8e0d0"
+           data-link-color="#c8a84b"
+           data-background-color="transparent"
+           data-display-limit="6"
+           data-display-start-time="false"
+           data-link-text-color="#e8e0d0"
+           data-display-lineup="false"
+           data-display-play-my-city="false"
+           data-popover-background-color="#1a1a1a"
+           data-language="en"
+        ></a>
+      </div>
+      <script defer src="https://widget.bandsintown.com/main.min.js" charset="utf-8"></script>
+    </div>
+    <div class="mt-4">
+      <a href="{{ "tour/" | relURL }}" class="btn btn-outline">All Tour Dates</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ──────────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">About the Crew</p>
+        <h2>Toronto's Shantymen</h2>
+        <p class="lead">We are a group of musicians and sailors dedicated to challenging conventional understanding of sea shanties from a place of deep immersion in their roots. We've travelled the globe to discover where this work song tradition really came from, who sang it and why, and what it still has to say.</p>
+        <p>Showcase artists at the 2023 Folk Music Ontario Conference and Folk Alliance International. In Summer 2026, we're touring the UK — Sidmouth Folk Week, Whitby, Shrewsbury, FolkEast, and more.</p>
+        <a href="{{ "about/" | relURL }}" class="btn btn-outline mt-3">More About Us</a>
+      </div>
+      <div class="about-image">
+        <img src="{{ "img/band-portrait.jpg" | relURL }}" alt="Pressgang Mutiny — band portrait" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Videos ────────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <p class="section-label">Watch</p>
+    <h2 style="margin-bottom: 2rem;">Videos</h2>
+    <div class="video-grid">
+      <div class="video-item">
+        <p class="video-label">Official Video</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/JFr9pm9NyPE" title="Pressgang Mutiny — Old Mick [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="video-item">
+        <p class="video-label">Official Video</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/buIacMPxdPk" title="Pressgang Mutiny — Roll Boys Roll [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="video-item">
+        <p class="video-label">Live Performance</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/5j7EMug2Kho" title="Pressgang Mutiny — Roll Boys Roll (Live)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4">
+      <a href="{{ "videos/" | relURL }}" class="btn btn-outline">All Videos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Mailing list ──────────────────────────────────────────── -->
+<section style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container" style="text-align: center; max-width: 600px;">
+    <p class="section-label">Stay in the Loop</p>
+    <h2 style="margin-bottom: 0.5rem;">Join the Crew</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">New shows, releases, and dispatches from the high seas. No spam, ever.</p>
+    <form class="mailing-form" style="flex-direction: row; gap: 0.5rem; max-width: 450px; margin: 0 auto;" action="{{ "subscribe" | relURL }}" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" required style="flex: 1;">
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</section>
+
+<!-- ── Podcast ────────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <p class="section-label">Podcast</p>
+    <div class="podcast-feature">
+      <img src="{{ "img/shanty-show-logo.jpg" | relURL }}" alt="The Shanty Show podcast" loading="lazy">
+      <div>
+        <h2>The Shanty Show</h2>
+        <p class="lead" style="font-size: 1rem;">A video and audio podcast featuring shanty singers and stories from around the world. We chat with the shanty world's best singers, performers, and historians — come along for the ride.</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">New episodes every two weeks. Available on YouTube, Spotify, and Apple Podcasts.</p>
+        <a href="{{ "the-shanty-show/" | relURL }}" class="btn btn-outline mt-3">All Episodes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Shop ────────────────────────────────────────────────────── -->
+<section style="background: var(--bg-card); border-top: 1px solid var(--border);">
+  <div class="container" style="text-align: center;">
+    <p class="section-label">Merch</p>
+    <h2 style="margin-bottom: 0.75rem;">Shop</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Albums, merchandise, and more.</p>
+    <a href="https://www.pressgangmutiny.com/shop" target="_blank" rel="noopener" class="btn btn-primary">Visit the Shop</a>
+  </div>
+</section>
+
+{{ end }}

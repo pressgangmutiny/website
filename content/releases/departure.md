@@ -1,0 +1,25 @@
+---
+title: "Departure"
+year: "2026"
+label: "Believe Music"
+description: "The most recent chapter. Departure pushes into new waters while staying true to the tradition — deep-groove shanties, sharp harmonies, and a crew that's been sailing together for over a decade."
+cover: "img/departure-cover.jpg"
+weight: 1
+links:
+  - name: "Bandcamp"
+    url: "https://pressgangmutiny.bandcamp.com/album/departure"
+  - name: "Spotify"
+    url: "https://open.spotify.com/album/2RKvMBaolLMkxKe3yEkgOG"
+  - name: "Apple Music"
+    url: "https://music.apple.com/ca/album/departure/1795155603"
+  - name: "Amazon Music"
+    url: "https://music.amazon.com/albums/B0DY9NXKD5"
+  - name: "Tidal"
+    url: "https://tidal.com/browse/album/420551553"
+  - name: "Deezer"
+    url: "https://www.deezer.com/en/album/730073611"
+  - name: "YouTube Music"
+    url: "https://music.youtube.com/playlist?list=OLAK5uy_moKtnSGjKJkz8OFDo8E0bkEjC9qfHU5OQ"
+  - name: "SoundCloud"
+    url: "https://soundcloud.com/pressgang-mutiny/sets/departure"
+---

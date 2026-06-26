@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="page-top-pad">
+  <div class="container">
+    <div class="page-header">
+      <p class="section-label">{{ .Title }}</p>
+      <h1>{{ .Title }}</h1>
+    </div>
+    <div class="news-grid">
+      {{ range .Pages }}
+      <a href="{{ .RelPermalink }}" style="text-decoration: none; color: inherit;">
+        <div class="news-card">
+          <p class="news-card-meta">{{ .Date.Format "January 2, 2006" }}</p>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

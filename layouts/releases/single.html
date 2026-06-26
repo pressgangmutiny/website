@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="page-top-pad">
+  <div class="container">
+
+    <div class="album-landing">
+      <div class="album-landing-cover">
+        <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }} album cover">
+      </div>
+      <div class="album-landing-info">
+        <p class="section-label">Album</p>
+        <h1>{{ .Title }}</h1>
+        <p class="album-landing-year">{{ .Params.year }}{{ with .Params.label }} &middot; {{ . }}{{ end }}</p>
+        <p class="album-landing-desc">{{ .Params.description }}</p>
+
+        <p class="album-landing-listen-label">Listen now</p>
+        <div class="album-landing-dsp">
+          {{ range .Params.links }}
+          <a href="{{ .url }}" target="_blank" rel="noopener" class="dsp-btn">{{ .name }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <a href="{{ "music/" | relURL }}" class="btn btn-outline">&larr; All Releases</a>
+    </div>
+
+  </div>
+</div>
+{{ end }}

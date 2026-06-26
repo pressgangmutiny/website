@@ -1,0 +1,121 @@
+{{ define "main" }}
+<div class="page-top-pad">
+  <div class="container">
+
+    <div class="page-header">
+      <p class="section-label">Media</p>
+      <h1>Press Kit</h1>
+      <p style="color: var(--text-muted); margin-top: 0.75rem;">
+        For booking: <a href="mailto:{{ site.Params.booking_email }}">{{ site.Params.booking_email }}</a>
+      </p>
+    </div>
+
+    <!-- Bio tabs -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 1.5rem;">Biography</h2>
+      <div class="bio-tabs" role="tablist">
+        <button class="bio-tab active" role="tab" onclick="switchTab('full', this)">Full</button>
+        <button class="bio-tab" role="tab" onclick="switchTab('short', this)">Short</button>
+        <button class="bio-tab" role="tab" onclick="switchTab('oneliner', this)">One-Liner</button>
+      </div>
+
+      <div id="bio-full" class="bio-panel active" style="max-width: 65ch;">
+        <p>Pressgang Mutiny, Toronto's shantymen. We are a group of musicians and sailors dedicated to challenging conventional understanding of sea shanties from a place of deep immersion in their roots. We've travelled the globe to discover where this work song tradition really came from, who sang it and why, and what it still has to say. Along the way, we discovered that sea shanties share musical roots with other popular forms such as Hip Hop, Soca, Dance Hall, and Reggae. Those roots are an often-erased history that we have an opportunity to shine a light on.</p>
+        <p>Our latest project, <em>Departure</em>, aims to do just that by drawing connections with the genres that share the same social, rhythmic, and communal roots. It features collaborations with Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins of Big Sugar, Toronto Hip Hop artist Matt Somber, Reggae MC Sunray Grennan and many other great musicians we're privileged to share a city with. We believe <em>Departure</em> represents a first step in restoring our tradition's multicultural, trans-Atlantic origins and showcasing sea shanties as a living global form rather than a museum piece.</p>
+        <p>We've toured and performed at major festivals across North America and Europe as well as the Caribbean, and were an official Showcase Artist at the Folk Music Ontario Conference in 2023. In Summer 2026, we'll tour the UK including performances at Sidmouth Folk Week, Whitby Folk Week, Shrewsbury, and FolkEast.</p>
+        <p>We are Richard Kott, Christan Mariyanayagam, James McKie, Michael O'Grady, and Stefan Read and we love singing together.</p>
+      </div>
+
+      <div id="bio-short" class="bio-panel" style="max-width: 65ch;">
+        <p>Toronto's shantymen. Musicians &amp; sailors challenging conventional understanding of sea shanties from a place of deep immersion in their roots. Our album <em>Departure</em> draws connections between shanties, Hip Hop, Soca, Reggae, and Dance Hall so shanties become a living global form, not a museum piece.</p>
+        <p>Showcase artists at the 2023 Folk Music Ontario Conference and Folk Alliance International. Touring the UK in Summer 2026 — Sidmouth, Whitby, Shrewsbury, FolkEast, and more.</p>
+      </div>
+
+      <div id="bio-oneliner" class="bio-panel" style="max-width: 65ch;">
+        <p style="font-size: 1.2rem; font-family: var(--font-display); font-style: italic; line-height: 1.6;">
+          Pressgang Mutiny are Toronto's shantymen — musicians and sailors who've toured festivals across North America, Europe, and the Caribbean, and whose latest album Departure draws on Hip Hop, Soca, Reggae, and Dance Hall to restore sea shanties as the multicultural, living global form they've always been.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Press quotes -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 1.5rem;">Press Quotes</h2>
+      <ul class="press-quotes-list">
+        <li>
+          <p class="press-quote-text">"If you enjoy the likes of Kimber's Men, you'll have an absolute whale of a time"</p>
+          <p class="press-quote-source">Graham Hobbs — <em>Shire Folk</em></p>
+        </li>
+        <li>
+          <p class="press-quote-text">"Now here's a crew I would sign on with"</p>
+          <p class="press-quote-source">David Francey</p>
+        </li>
+        <li>
+          <p class="press-quote-text">"Their singing is perfectly suited to their material"</p>
+          <p class="press-quote-source">Gordon Potter — <em>Living Tradition</em></p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Festival history -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 1.5rem;">Selected Appearances</h2>
+      <ul class="festival-list">
+        <li>Mystic Sea Music Festival, USA</li>
+        <li>Folk Music Ontario Showcase</li>
+        <li>Folk Alliance International Showcase</li>
+        <li>Paimpol Festival du Chants de Marin, France</li>
+        <li>Whitby Folk Week, UK</li>
+        <li>SING! Toronto International Vocal Arts Festival</li>
+        <li>Bie Daip Internationaal Folk Festival, Netherlands</li>
+        <li>Port Praci Piesni Festival, Poland</li>
+        <li>Papenburg Music Festival, Germany</li>
+        <li>Goderich Celtic Roots Festival, Canada</li>
+        <li>Toronto Folk Festival</li>
+        <li>Muskoka Music Festival, Canada</li>
+        <li>Festival Navegacion Tradicional del Caribe Insular, Colombia</li>
+        <li>Essex Sea Music Festival, USA</li>
+        <li>Fundy Sea Shanty Festival, Canada</li>
+        <li>Festival Chants de Marins, Saint-Jean-Port-Joli</li>
+        <li>Oban International Shanty Festival, UK</li>
+        <li>Baga Fish Fest, St. Vincent &amp; the Grenadines</li>
+      </ul>
+    </section>
+
+    <!-- Photos & downloads -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 1.5rem;">Photos</h2>
+      <div class="epk-photos">
+        <div class="epk-photo">
+          <img src="{{ "img/gallery-1.jpg" | relURL }}" alt="Pressgang Mutiny — press photo">
+          <p class="epk-photo__label">Press Photo</p>
+        </div>
+        <div class="epk-photo">
+          <img src="{{ "img/band-portrait.jpg" | relURL }}" alt="Pressgang Mutiny — band portrait">
+          <p class="epk-photo__label">Band Portrait</p>
+        </div>
+        <div class="epk-photo">
+          <img src="{{ "img/gallery-2.jpg" | relURL }}" alt="Pressgang Mutiny — live">
+          <p class="epk-photo__label">Live</p>
+        </div>
+      </div>
+      <div class="epk-actions">
+        <a href="mailto:{{ site.Params.booking_email }}?subject=Press%20photos%20request" class="btn btn-outline">Request Hi-Res Photos</a>
+        <a href="mailto:{{ site.Params.booking_email }}?subject=Tech%20rider%20request" class="btn btn-outline">Request Tech Rider</a>
+        <a href="mailto:{{ site.Params.booking_email }}?subject=Booking%20inquiry" class="btn btn-primary">Booking Inquiry</a>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.bio-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.bio-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('bio-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+{{ end }}

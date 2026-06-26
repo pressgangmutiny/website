@@ -1,0 +1,24 @@
+baseURL = 'https://www.pressgangmutiny.com/'
+languageCode = 'en-ca'
+title = 'Pressgang Mutiny | Sea Shanties'
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Toronto's shantymen. Musicians & sailors challenging conventional understanding of sea shanties from a place of deep immersion in their roots. Our album Departure draws connections between shanties, Hip Hop, Soca, Reggae, and Dance Hall so shanties become a living global form, not a museum piece."
+  booking_email = "pressgangmutiny@gmail.com"
+  bandcamp  = "https://pressgangmutiny.bandcamp.com"
+  spotify   = "https://open.spotify.com/artist/7Hqytp4VVYmsYGJ9OGaVm8"
+  youtube   = "https://www.youtube.com/@pressgangmutiny"
+  instagram = "https://www.instagram.com/pressgangmutiny/"
+  facebook  = "https://www.facebook.com/pressgangmutiny"
+  tiktok    = "https://www.tiktok.com/@pressgangmutiny"
+  twitter   = "https://twitter.com/pressgangmutiny"
+
+[sitemap]
+  changefreq = "weekly"
+  priority   = 0.5

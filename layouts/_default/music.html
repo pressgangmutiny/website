@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{ $albums := slice }}
+{{ $singles := slice }}
+{{ range (where site.RegularPages "Section" "releases").ByWeight }}
+  {{ if ge .Params.weight 1 }}
+    {{ $albums = $albums | append . }}
+  {{ else }}
+    {{ $singles = $singles | append . }}
+  {{ end }}
+{{ end }}
+
+<div class="page-top-pad">
+  <div class="container">
+
+    <div class="page-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 2rem;">
+      <p class="section-label">Discography</p>
+      <h1>Music</h1>
+      <p style="color: var(--text-muted); max-width: 55ch; margin-top: 0.75rem;">
+        Three albums, ten years of shanties.
+      </p>
+    </div>
+
+    <!-- Albums -->
+    <h2 style="margin-bottom: 1.5rem;">Albums</h2>
+    <div class="album-cover-grid">
+      {{ range $albums }}
+      <a href="{{ .RelPermalink }}" class="album-cover-card">
+        <div class="album-cover-card-img">
+          <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }} album cover" loading="lazy">
+        </div>
+        <h3>{{ .Title }}</h3>
+        <span class="album-cover-card-year">{{ .Params.year }}{{ with .Params.label }} &middot; {{ . }}{{ end }}</span>
+      </a>
+      {{ end }}
+    </div>
+
+    <!-- Singles -->
+    {{ if $singles }}
+    <h2 style="margin-top: 3.5rem; margin-bottom: 1.5rem;">Singles</h2>
+    <div class="album-cover-grid album-cover-grid--four">
+      {{ range $singles }}
+      <a href="{{ .RelPermalink }}" class="album-cover-card">
+        <div class="album-cover-card-img">
+          <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }} cover" loading="lazy">
+        </div>
+        <h3>{{ .Title }}</h3>
+        <span class="album-cover-card-year">{{ .Params.year }}{{ with .Params.label }} &middot; {{ . }}{{ end }}</span>
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- General streaming links -->
+    <div style="margin-top: 4rem; background: var(--bg-card); border: 1px solid var(--border); padding: 2.5rem;">
+      <h2 style="margin-bottom: 0.75rem;">Find us everywhere</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Stream, buy, or follow Pressgang Mutiny on your platform of choice.</p>
+      <div class="dsp-grid">
+        <a href="{{ site.Params.bandcamp }}" target="_blank" rel="noopener" class="dsp-btn">Bandcamp</a>
+        <a href="{{ site.Params.spotify }}" target="_blank" rel="noopener" class="dsp-btn">Spotify</a>
+        <a href="https://music.apple.com/ca/artist/pressgang-mutiny/1131731476" target="_blank" rel="noopener" class="dsp-btn">Apple Music</a>
+        <a href="https://music.amazon.com/artists/B07H6MBFXK/pressgang-mutiny" target="_blank" rel="noopener" class="dsp-btn">Amazon Music</a>
+        <a href="https://music.youtube.com/channel/UCGS7EWDHGpUHQkRdrshQEkA" target="_blank" rel="noopener" class="dsp-btn">YouTube Music</a>
+        <a href="https://www.deezer.com/en/artist/51097482" target="_blank" rel="noopener" class="dsp-btn">Deezer</a>
+        <a href="https://tidal.com/browse/artist/14045763" target="_blank" rel="noopener" class="dsp-btn">Tidal</a>
+        <a href="https://soundcloud.com/pressgangmutiny" target="_blank" rel="noopener" class="dsp-btn">SoundCloud</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+{{ end }}

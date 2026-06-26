@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="page-top-pad">
+  <div class="container">
+
+    <div class="page-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 2rem;">
+      <p class="section-label">On the Road</p>
+      <h1>Tour Dates</h1>
+      <p style="color: var(--text-muted); max-width: 55ch; margin-top: 0.75rem;">
+        Pressgang Mutiny are touring Canada and the UK through summer 2026.
+        For booking inquiries: <a href="mailto:{{ site.Params.booking_email }}">{{ site.Params.booking_email }}</a>
+      </p>
+    </div>
+
+    <!-- UK Tour 2026 callout -->
+    <div style="background: var(--bg-card); border: 1px solid var(--accent); padding: 1.5rem 2rem; margin-bottom: 3rem; border-radius: 2px;">
+      <p class="section-label" style="margin-bottom: 0.5rem;">UK Summer Tour</p>
+      <p style="font-size: 1.05rem; margin: 0;">July 31 – August 31, 2026 — Sidmouth to Shrewsbury. Ten dates across England and Wales.</p>
+    </div>
+
+    <h2 style="margin-bottom: 1.5rem;">Upcoming</h2>
+    <div style="margin-bottom: 4rem;">
+      <!-- BandsInTown widget — auto-updates from Pressgang Mutiny artist page -->
+      <div id="bit-events-widget">
+        <a class="bit-widget-initializer"
+           data-artist-name="Pressgang Mutiny"
+           data-display-local-dates="false"
+           data-display-past-dates="false"
+           data-auto-style="false"
+           data-text-color="#e8e0d0"
+           data-link-color="#c8a84b"
+           data-background-color="transparent"
+           data-display-limit="10"
+           data-display-start-time="false"
+           data-link-text-color="#e8e0d0"
+           data-display-lineup="false"
+           data-display-play-my-city="false"
+           data-popover-background-color="#1a1a1a"
+           data-language="en"
+        ></a>
+      </div>
+      <script defer src="https://widget.bandsintown.com/main.min.js" charset="utf-8"></script>
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+      <p class="section-label">Where We've Been</p>
+      <h2 style="margin-bottom: 0.5rem;">Notable Appearances</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Selected festivals and showcases across four continents.</p>
+    </div>
+    <ul class="notable-list">
+      <li><span class="notable-name">Folk Alliance International Showcase</span><span class="notable-loc">Montreal, Canada</span></li>
+      <li><span class="notable-name">Folk Music Ontario Showcase</span><span class="notable-loc">Toronto, Canada</span></li>
+      <li><span class="notable-name">Paimpol Festival du Chants de Marin</span><span class="notable-loc">Paimpol, France</span></li>
+      <li><span class="notable-name">Whitby Folk Week</span><span class="notable-loc">Whitby, UK</span></li>
+      <li><span class="notable-name">Mystic Sea Music Festival</span><span class="notable-loc">Mystic, USA</span></li>
+      <li><span class="notable-name">Goderich Celtic Roots Festival</span><span class="notable-loc">Goderich, Canada</span></li>
+      <li><span class="notable-name">Festival Navegacion Tradicional del Caribe Insular</span><span class="notable-loc">Colombia</span></li>
+      <li><span class="notable-name">Papenburg Music Festival</span><span class="notable-loc">Papenburg, Germany</span></li>
+      <li><span class="notable-name">Oban International Shanty Festival</span><span class="notable-loc">Oban, UK</span></li>
+      <li><span class="notable-name">SING! Toronto International Vocal Arts Festival</span><span class="notable-loc">Toronto, Canada</span></li>
+      <li><span class="notable-name">Fundy Sea Shanty Festival</span><span class="notable-loc">New Brunswick, Canada</span></li>
+      <li><span class="notable-name">Bie Daip Internationaal Folk Festival</span><span class="notable-loc">Netherlands</span></li>
+      <li><span class="notable-name">Port Praci Piesni Festival</span><span class="notable-loc">Poland</span></li>
+      <li><span class="notable-name">Baga Fish Fest</span><span class="notable-loc">St. Vincent &amp; the Grenadines</span></li>
+    </ul>
+
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,29 @@
+{{ $home := "" | relURL }}
+{{ $about := "about/" | relURL }}
+{{ $tour := "tour/" | relURL }}
+{{ $podcast := "the-shanty-show/" | relURL }}
+{{ $news := "news/" | relURL }}
+{{ $epk := "press-kit/" | relURL }}
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="{{ $home }}" class="nav-logo">Pressgang <span>Mutiny</span></a>
+    <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none">
+        <rect y="0" width="22" height="2" fill="currentColor"/>
+        <rect y="7" width="22" height="2" fill="currentColor"/>
+        <rect y="14" width="22" height="2" fill="currentColor"/>
+      </svg>
+    </button>
+    <ul class="nav-links" role="list">
+      <li><a href="{{ $home }}">Home</a></li>
+      <li><a href="{{ $about }}">About</a></li>
+      <li><a href="{{ $tour }}">Tour</a></li>
+      <li><a href="{{ $podcast }}">Podcast</a></li>
+      <li><a href="{{ $news }}">News</a></li>
+      <li><a href="{{ "videos/" | relURL }}">Videos</a></li>
+      <li><a href="{{ $epk }}">EPK</a></li>
+      <li><a href="https://www.pressgangmutiny.com/shop" target="_blank" rel="noopener">Shop</a></li>
+      <li><a href="{{ "music/" | relURL }}" class="nav-cta">Music</a></li>
+    </ul>
+  </div>
+</nav>

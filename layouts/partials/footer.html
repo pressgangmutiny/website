@@ -1,0 +1,58 @@
+{{ $home := "" | relURL }}
+{{ $about := "about/" | relURL }}
+{{ $tour := "tour/" | relURL }}
+{{ $podcast := "the-shanty-show/" | relURL }}
+{{ $news := "news/" | relURL }}
+{{ $epk := "press-kit/" | relURL }}
+{{ $subscribe := "subscribe" | relURL }}
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <div class="footer-col">
+        <div class="footer-brand">Pressgang <span>Mutiny</span></div>
+        <p class="footer-tagline">Toronto's Shantymen. Touring the world since 2013.</p>
+        <p class="mt-2" style="font-size:0.85rem; color: var(--text-muted); margin-top: 0.75rem;">
+          Booking: <a href="mailto:{{ site.Params.booking_email }}">{{ site.Params.booking_email }}</a>
+        </p>
+        <div class="footer-social" style="margin-top: 1.25rem;">
+          <a href="{{ site.Params.bandcamp }}" target="_blank" rel="noopener">Bandcamp</a>
+          <a href="https://open.spotify.com/show/35qA8mNODUN6DMXvPSns7u" target="_blank" rel="noopener">Shanty Show</a>
+          <a href="{{ site.Params.spotify }}" target="_blank" rel="noopener">Spotify</a>
+          <a href="{{ site.Params.youtube }}" target="_blank" rel="noopener">YouTube</a>
+          <a href="{{ site.Params.instagram }}" target="_blank" rel="noopener">Instagram</a>
+          <a href="{{ site.Params.facebook }}" target="_blank" rel="noopener">Facebook</a>
+          <a href="{{ site.Params.tiktok }}" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-label">Navigation</p>
+        <ul class="footer-nav-list">
+          <li><a href="{{ $home }}">Home</a></li>
+          <li><a href="{{ $about }}">About</a></li>
+          <li><a href="{{ $tour }}">Tour</a></li>
+          <li><a href="{{ $podcast }}">Podcast</a></li>
+          <li><a href="{{ $news }}">News</a></li>
+          <li><a href="{{ "videos/" | relURL }}">Videos</a></li>
+          <li><a href="{{ $epk }}">EPK</a></li>
+          <li><a href="{{ "music/" | relURL }}">Music</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-col-label">Stay in the Loop</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">New shows, releases, and dispatches from the high seas.</p>
+        <form class="mailing-form" action="{{ $subscribe }}" method="POST">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© {{ now.Year }} Pressgang Mutiny</span>
+      <span class="canada-council">We acknowledge the support of the Canada Council for the Arts.</span>
+    </div>
+  </div>
+</footer>

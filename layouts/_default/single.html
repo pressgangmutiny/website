@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="page-top-pad">
+  <div class="container">
+    <div class="page-header">
+      {{ with .Params.section_label }}<p class="section-label">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ if and (not .Params.hide_date) (.Date) (gt .Date.Year 2000) }}
+      <p class="text-muted mt-1" style="font-size: 0.85rem;">{{ .Date.Format "January 2, 2006" }}</p>
+      {{ end }}
+    </div>
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}

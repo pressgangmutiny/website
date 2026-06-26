@@ -1,0 +1,109 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Pressgang Mutiny{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Favicon -->
+<link rel="icon" href="{{ "img/favicon.svg" | relURL }}" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ if .IsHome }}website{{ else if eq .Section "releases" }}music.album{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Pressgang Mutiny{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="Pressgang Mutiny">
+<meta property="og:locale" content="en_CA">
+{{ if .Params.cover -}}
+<meta property="og:image" content="{{ .Params.cover | absURL }}">
+{{ else -}}
+<meta property="og:image" content="{{ "img/band-hero.jpg" | absURL }}">
+{{ end -}}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@pressgangmutiny">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Pressgang Mutiny{{ end }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+{{ if .Params.cover -}}
+<meta name="twitter:image" content="{{ .Params.cover | absURL }}">
+{{ else -}}
+<meta name="twitter:image" content="{{ "img/band-hero.jpg" | absURL }}">
+{{ end -}}
+
+<!-- Styles -->
+<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+
+<!-- MusicGroup schema (all pages) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Pressgang Mutiny",
+  "description": "{{ site.Params.description }}",
+  "url": "{{ site.BaseURL }}",
+  "image": "{{ "img/band-hero.jpg" | absURL }}",
+  "genre": ["Sea Shanties", "Folk", "World Music", "Traditional"],
+  "foundingDate": "2013",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Toronto, Ontario, Canada"
+  },
+  "member": [
+    { "@type": "Person", "name": "Stefan Read" },
+    { "@type": "Person", "name": "Richard Kott" },
+    { "@type": "Person", "name": "James McKie" },
+    { "@type": "Person", "name": "Michael O'Grady" },
+    { "@type": "Person", "name": "Christan Mariyanayagam" }
+  ],
+  "sameAs": [
+    "{{ site.Params.bandcamp }}",
+    "{{ site.Params.spotify }}",
+    "{{ site.Params.youtube }}",
+    "{{ site.Params.facebook }}",
+    "{{ site.Params.instagram }}",
+    "{{ site.Params.tiktok }}",
+    "{{ site.Params.twitter }}"
+  ]
+}
+</script>
+
+{{ if eq .Section "releases" }}{{ if .IsPage }}
+<!-- MusicAlbum / MusicRecording schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ if ge .Params.weight 1 }}MusicAlbum{{ else }}MusicRecording{{ end }}",
+  "name": "{{ .Title }}",
+  "description": "{{ .Params.description }}",
+  "datePublished": "{{ .Params.year }}",
+  {{ with .Params.cover }}"image": "{{ . | absURL }}",{{ end }}
+  "byArtist": {
+    "@type": "MusicGroup",
+    "name": "Pressgang Mutiny"
+  }{{ with .Params.label }},
+  "recordLabel": {
+    "@type": "Organization",
+    "name": "{{ . }}"
+  }{{ end }}
+}
+</script>
+{{ end }}{{ end }}
+
+{{ if eq .Layout "the-shanty-show" }}
+<!-- Podcast schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "The Shanty Show",
+  "description": "The world's foremost podcast about shanties — featuring conversations with the best shanty singers, scholars, and historians from around the world.",
+  "url": "{{ .Permalink }}",
+  "author": {
+    "@type": "MusicGroup",
+    "name": "Pressgang Mutiny"
+  },
+  "webFeed": "https://www.youtube.com/playlist?list=PLTVrVI4udC7XOiVyKRHRwNh1s1bP8XI1S"
+}
+</script>
+{{ end }}

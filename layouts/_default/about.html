@@ -1,0 +1,107 @@
+{{ define "main" }}
+<div class="page-top-pad">
+  <div class="container">
+
+    <div class="page-header">
+      <p class="section-label">The Band</p>
+      <h1>About</h1>
+    </div>
+
+    <!-- Band overview -->
+    <section class="about-grid" style="margin-bottom: 5rem;">
+      <div class="about-text">
+        <p class="lead">We are a group of musicians and sailors dedicated to challenging conventional understanding of sea shanties from a place of deep immersion in their roots.</p>
+        <p>We've travelled the globe to discover where this work song tradition really came from, who sang it and why, and what it still has to say. Along the way, we discovered that sea shanties share musical roots with other popular forms such as Hip Hop, Soca, Dance Hall, and Reggae. Those roots are an often-erased history that we have an opportunity to shine a light on.</p>
+        <p>Our latest project, <em>Departure</em>, aims to do just that by drawing connections with the genres that share the same social, rhythmic, and communal roots. It features collaborations with Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins of Big Sugar, Toronto Hip Hop artist Matt Somber, Reggae MC Sunray Grennan and many other great musicians we're privileged to share a city with. We believe <em>Departure</em> represents a first step in restoring our tradition's multicultural, trans-Atlantic origins and showcasing sea shanties as a living global form rather than a museum piece.</p>
+        <p>We've toured and performed at major festivals across North America and Europe as well as the Caribbean, and were an official Showcase Artist at the Folk Music Ontario Conference in 2023. In Summer 2026, we'll tour the UK including performances at Sidmouth Folk Week, Whitby Folk Week, Shrewsbury, and FolkEast.</p>
+        <p>We are Richard Kott, Christan Mariyanayagam, James McKie, Michael O'Grady, and Stefan Read and we love singing together.</p>
+      </div>
+      <div class="about-image-gallery">
+        <div class="aig-main"><img src="{{ "img/gallery-1.jpg" | relURL }}" alt="Pressgang Mutiny" loading="lazy"></div>
+        <div class="aig-secondary">
+          <div><img src="{{ "img/gallery-3.jpg" | relURL }}" alt="Pressgang Mutiny" loading="lazy"></div>
+          <div><img src="{{ "img/gallery-4.jpg" | relURL }}" alt="Pressgang Mutiny" loading="lazy"></div>
+        </div>
+        <div class="aig-wide"><img src="{{ "img/gallery-2.jpg" | relURL }}" alt="Pressgang Mutiny live" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- Members -->
+    <section style="margin-bottom: 5rem;">
+      <p class="section-label">The Crew</p>
+      <h2 style="margin-bottom: 2.5rem;">Members</h2>
+      <div class="members-grid">
+
+        <div class="member-card">
+          <div class="member-photo"><img src="{{ "img/member-richard.jpg" | relURL }}" alt="Richard Kott"></div>
+          <div class="member-info">
+            <h3>Richard Kott</h3>
+            <p class="member-role">Vocals, Guitar, Spoons</p>
+            <p>A lifelong singer with a deep love of vocal harmony and an eclectic taste in music — experienced chorister, a capella bass, soloist, and accomplished guitar and piano player. In Pressgang Mutiny, you'll find him hanging around a low C having basso profundo fun, or delivering emotional ballads about love and loss. Brings two decades of technology experience to the band's workshop and educational programme design.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo"><img src="{{ "img/member-james.jpg" | relURL }}" alt="James McKie"></div>
+          <div class="member-info">
+            <h3>James McKie</h3>
+            <p class="member-role">Vocals, Fiddle, Guitar, Sampler</p>
+            <p>Juno Award-winning multi-instrumentalist, composer, and producer whose career is defined by global cultural exchange and technical mastery. Has collaborated with the Cowboy Junkies, toured across five continents, and completed cultural residencies in Chile and Colombia. Holds an MA in Music and a BFA.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo"><img src="{{ "img/member-michael.jpg" | relURL }}" alt="Michael O'Grady"></div>
+          <div class="member-info">
+            <h3>Michael O'Grady</h3>
+            <p class="member-role">Vocals, Guitar, Tin Whistle</p>
+            <p>Internationally acclaimed multi-instrumentalist, vocalist, and award-winning Irish dancer whose career has taken him to 27 countries with approximately 200 performances annually. Has collaborated with Blue Rodeo, Spirit of the West, Dropkick Murphys, and Flogging Molly, and appeared on over 30 professional recordings. An educator with 35 years of experience teaching piano and tin whistle, with work in Indigenous mental health programs through music.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo"><img src="{{ "img/member-stefan.jpg" | relURL }}" alt="Stefan Read"></div>
+          <div class="member-info">
+            <h3>Stefan Read</h3>
+            <p class="member-role">Vocals, Concertina</p>
+            <p>A second-generation folk musician and dancer who has spearheaded multiple folk-related projects in Toronto and abroad, including cross-cultural performances in Canada, the UK, US, and Mexico. Producer of <em>The Shanty Show</em>. Also performs with Sweet Felons All and organizes Another Bloody Folk Club, Toronto's only traditional folk club.</p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <div class="member-photo"><img src="{{ "img/member-christan.jpg" | relURL }}" alt="Christan Mariyanayagam / DJ Chaotic Vibrance"></div>
+          <div class="member-info">
+            <h3>Christan Mariyanayagam <span style="font-weight: 400; font-size: 0.85em; color: var(--text-muted);">/ DJ Chaotic Vibrance</span></h3>
+            <p class="member-role">DJ, Audio Engineer</p>
+            <p>Canadian multidisciplinary artist, DJ, and technical designer whose practice integrates turntablism, live audio engineering, and real-time visual performance into immersive live experiences. Rooted in scratch turntablism, improvisation, and club culture. Has worked as touring and studio audio engineer for The Trews, Arkells, IllScarlett, and others.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- The mission -->
+    <section style="margin-bottom: 5rem; border-top: 1px solid var(--border); padding-top: 3rem;">
+      <p class="section-label">Why Shanties</p>
+      <h2 style="margin-bottom: 1.5rem; max-width: 18ch;">A Deeply Multicultural Music</h2>
+      <div class="about-prose">
+        <p>The sea shanty is often presented as a quaint British nautical tradition. That's wrong. Shanties were work songs sung aboard merchant and whaling ships crewed by sailors from every corner of the globe — West Africa, the Caribbean, Ireland, Scandinavia, the American South. The musical exchange was constant and deeply intertwined with the brutal economics of maritime labour.</p>
+        <p>We take that history seriously. It's why <em>Departure</em> sounds the way it does — why a group of shantymen from Toronto is making music with Reggae artists and Hip Hop producers. The tradition was always about drawing connections between the music sailors carried with them. We're just continuing that.</p>
+        <p>The Shanty Show — our video podcast now in its fourth year — follows the same logic: find the people who actually know this music, wherever they are, and ask them to share it.</p>
+      </div>
+    </section>
+
+    <!-- Contact / booking -->
+    <section style="background: var(--bg-card); border: 1px solid var(--border); padding: 2.5rem; margin-bottom: 4rem;">
+      <p class="section-label">Get in Touch</p>
+      <h2 style="margin-bottom: 0.75rem;">Booking &amp; Inquiries</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem; max-width: 50ch;">For booking, press, and general inquiries — get in touch directly.</p>
+      <div class="hero-actions">
+        <a href="mailto:{{ site.Params.booking_email }}" class="btn btn-primary">{{ site.Params.booking_email }}</a>
+        <a href="{{ "press-kit/" | relURL }}" class="btn btn-outline">Download EPK</a>
+      </div>
+    </section>
+
+  </div>
+</div>
+{{ end }}
