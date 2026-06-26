@@ -470,7 +470,7 @@ section {
   min-width: 100%;
   min-height: 56.25vw;
   transform: translateX(-50%);
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .podcast-hero-overlay {
