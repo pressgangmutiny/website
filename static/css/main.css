@@ -259,7 +259,11 @@ section {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(12,10,8,0.85) 0%, transparent 18%);
+  background:
+    linear-gradient(to right, rgba(12,10,8,0.85) 0%, transparent 18%),
+    linear-gradient(to bottom, var(--bg) 0%, transparent 12%),
+    linear-gradient(to top, var(--bg) 0%, transparent 15%);
+  pointer-events: none;
 }
 
 .hero-image::before {
@@ -1157,17 +1161,6 @@ section {
   .photo-gallery__item { grid-column: unset !important; grid-row: unset !important; aspect-ratio: 1 !important; }
 }
 
-/* ── Photo vignetting — soft fade-to-black edges ─────────── */
-.hero-image img,
-.about-image img,
-.about-image-gallery img,
-.photo-gallery__item img,
-.epk-photo img,
-.member-photo img {
-  mask-image: radial-gradient(ellipse 85% 85% at center, black 60%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 85% at center, black 60%, transparent 100%);
-}
-
 /* EPK press photo grid */
 .epk-photos {
   display: grid;
@@ -1210,7 +1203,8 @@ section {
 .aig-wide,
 .photo-gallery__item,
 .epk-photo,
-.member-photo {
+.member-photo,
+.video-card-thumb {
   position: relative;
 }
 .about-image::after,
@@ -1219,12 +1213,21 @@ section {
 .aig-wide::after,
 .photo-gallery__item::after,
 .epk-photo::after,
-.member-photo::after {
+.member-photo::after,
+.video-card-thumb::after {
   content: '';
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 40px 15px var(--bg);
+  box-shadow: inset 0 0 60px 30px var(--bg);
   pointer-events: none;
+}
+/* Album covers: no vignette, floating border instead */
+.about-image--album::after {
+  display: none;
+}
+.about-image--album img {
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
 }
 
 /* ── Utility ─────────────────────────────────────────────────── */
@@ -1456,11 +1459,13 @@ section {
   aspect-ratio: 1;
   overflow: hidden;
   margin-bottom: 1rem;
-  border: 1px solid var(--border);
-  transition: border-color 0.2s;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .album-cover-card:hover .album-cover-card-img {
   border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6), 0 0 0 1px rgba(26,111,168,0.15);
 }
 .album-cover-card-img img {
   width: 100%;
@@ -1507,7 +1512,8 @@ section {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
 }
 .album-landing-info {
   padding-top: 0.5rem;
