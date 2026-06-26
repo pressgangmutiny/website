@@ -1157,6 +1157,17 @@ section {
   .photo-gallery__item { grid-column: unset !important; grid-row: unset !important; aspect-ratio: 1 !important; }
 }
 
+/* ── Photo vignetting — soft fade-to-black edges ─────────── */
+.hero-image img,
+.about-image img,
+.about-image-gallery img,
+.photo-gallery__item img,
+.epk-photo img,
+.member-photo img {
+  mask-image: radial-gradient(ellipse 85% 85% at center, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at center, black 60%, transparent 100%);
+}
+
 /* EPK press photo grid */
 .epk-photos {
   display: grid;
