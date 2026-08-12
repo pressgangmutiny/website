@@ -1,0 +1,12 @@
+# Cloudflare Pages redirects — www.pressgangmutiny.com
+# Format: <from>  <to>  <status>
+# Hugo copies everything in static/ verbatim into public/, which is what
+# Cloudflare Pages publishes. Push to main is the only thing that deploys this.
+
+# Singing Tattoo — Stefan's ask, 12 Aug 2026.
+# 302 and not 301 on purpose: the target is a Tailscale Funnel URL on a personal
+# machine, so it is likely to move. Browsers cache a 301 hard and would strand
+# anyone who hit it once. Change the target here and push; nothing else to do.
+/singingtattoo    https://threadripper-wsl.taila3ab90.ts.net/pressgang  302
+/singingtattoo/   https://threadripper-wsl.taila3ab90.ts.net/pressgang  302
+/singingtattoo/*  https://threadripper-wsl.taila3ab90.ts.net/pressgang  302
