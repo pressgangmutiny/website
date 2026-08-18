@@ -1,43 +1,97 @@
 {{ define "main" }}
 <div class="page-top-pad">
+
+  <!-- EPK opening screen: hero + one-liner + CTA -->
+  <div class="container">
+    <div class="epk-hero">
+      <div class="epk-hero__image">
+        <img src="{{ "img/band-hero.jpg" | relURL }}" alt="Pressgang Mutiny — Toronto's shantymen">
+      </div>
+      <div class="epk-hero__text">
+        <p class="section-label">Press Kit</p>
+        <h1 style="margin-bottom: 1.25rem;">Pressgang Mutiny</h1>
+        <p class="epk-hero__oneliner">
+          Toronto's "delightfully unhinged and uniquely talented" shantymen — musicians and sailors whose latest album <em>Departure</em> draws on hip hop, soca, ska, and dancehall to restore sea shanties as the multicultural, living global form they've always been.
+        </p>
+        <div class="epk-actions" style="margin-top: 1.75rem;">
+          <a href="mailto:{{ site.Params.booking_email }}?subject=Booking%20inquiry" class="btn btn-primary">Booking Inquiry</a>
+          <a href="mailto:{{ site.Params.booking_email }}?subject=Press%20photos%20request" class="btn btn-outline">Hi-Res Photos</a>
+          <a href="mailto:{{ site.Params.booking_email }}?subject=Tech%20rider%20request" class="btn btn-outline">Tech Rider</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote band -->
+  <div class="epk-quote-band">
+    <div class="container">
+      <p class="epk-quote-band__quote">"Delightfully unhinged and uniquely talented"</p>
+      <p class="epk-quote-band__source">Audience member — Swansea, Summer 2026 UK tour</p>
+    </div>
+  </div>
+
   <div class="container">
 
-    <div class="page-header">
-      <p class="section-label">Media</p>
-      <h1>Press Kit</h1>
-      <p style="color: var(--text-muted); margin-top: 0.75rem;">
-        For booking: <a href="mailto:{{ site.Params.booking_email }}">{{ site.Params.booking_email }}</a>
-      </p>
-    </div>
-
-    <!-- Bio tabs -->
-    <section style="margin-bottom: 4rem;">
+    <!-- Biography with side photos -->
+    <section style="margin: 4rem 0;">
       <h2 style="margin-bottom: 1.5rem;">Biography</h2>
-      <div class="bio-tabs" role="tablist">
-        <button class="bio-tab active" role="tab" onclick="switchTab('full', this)">Full</button>
-        <button class="bio-tab" role="tab" onclick="switchTab('short', this)">Short</button>
-        <button class="bio-tab" role="tab" onclick="switchTab('oneliner', this)">One-Liner</button>
-      </div>
+      <div class="epk-bio-grid">
+        <div>
+          <div class="bio-tabs" role="tablist">
+            <button class="bio-tab active" role="tab" onclick="switchTab('full', this)">Full</button>
+            <button class="bio-tab" role="tab" onclick="switchTab('short', this)">Short</button>
+            <button class="bio-tab" role="tab" onclick="switchTab('oneliner', this)">One-Liner</button>
+          </div>
 
-      <div id="bio-full" class="bio-panel active" style="max-width: 65ch;">
-        <p>Pressgang Mutiny, Toronto's "delightfully unhinged and uniquely talented" shantymen. We are a group of musicians and sailors dedicated to challenging conventional understanding of sea shanties from a place of deep immersion in their roots. We've travelled the globe to discover where this work song tradition really came from, who sang it and why, and what it still has to say. Along the way, we discovered that sea shanties share musical roots with other popular forms such as hip hop, soca, dancehall, and ska. Those roots are an often-erased history that we have an opportunity to shine a light on.</p>
-        <p>Our latest project, <em>Departure</em>, aims to do just that by drawing connections with the genres that share the same social, rhythmic, and communal roots. It features collaborations with Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins of Big Sugar, Toronto hip hop artist Matt Somber, reggae MC Sunray Grennan and many other great musicians we're privileged to share a city with. We believe <em>Departure</em> represents a first step in restoring our tradition's multicultural, trans-Atlantic origins and showcasing sea shanties as a living global form rather than a museum piece.</p>
-        <p>We've toured and performed at major festivals across North America and Europe as well as the Caribbean, and were an official Showcase Artist at the Folk Music Ontario Conference in 2023. Summer 2026 took us across the UK, with performances at Sidmouth Folk Festival, FolkEast, Whitby Folk Week, and Shrewsbury Folk Festival.</p>
-        <p>We are Richard Kott, Christan Mariyanayagam, James McKie, Michael O'Grady, and Stefan Read and we love singing together.</p>
-      </div>
+          <div id="bio-full" class="bio-panel active" style="max-width: 65ch;">
+            <p>Pressgang Mutiny are Toronto's "delightfully unhinged and uniquely talented" shantymen — a group of musicians and sailors dedicated to challenging conventional understanding of sea shanties from a place of deep immersion in their roots. They've travelled the globe to discover where this work song tradition really came from, who sang it and why, and what it still has to say. Along the way they discovered that sea shanties share musical roots with other popular forms such as hip hop, soca, dancehall, and ska. Those roots are an often-erased history the band has an opportunity to shine a light on.</p>
+            <p>Their latest project, <em>Departure</em>, aims to do just that by drawing connections with the genres that share the same social, rhythmic, and communal roots. It features collaborations with Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins of Big Sugar, Toronto hip hop artist Matt Somber, reggae MC Sunray Grennan and many other great musicians they're privileged to share a city with. <em>Departure</em> represents a first step in restoring the tradition's multicultural, trans-Atlantic origins and showcasing sea shanties as a living global form rather than a museum piece.</p>
+            <p>The band has toured and performed at major festivals across North America and Europe as well as the Caribbean, and was an official Showcase Artist at the Folk Music Ontario Conference in 2023. Summer 2026 took them across the UK, with performances at Sidmouth Folk Festival, FolkEast, Whitby Folk Week, and Shrewsbury Folk Festival.</p>
+            <p>Pressgang Mutiny are Richard Kott, Christan Mariyanayagam, James McKie, Michael O'Grady, and Stefan Read — and they love singing together.</p>
+          </div>
 
-      <div id="bio-short" class="bio-panel" style="max-width: 65ch;">
-        <p>Toronto's "delightfully unhinged and uniquely talented" shantymen. Musicians &amp; sailors challenging conventional understanding of sea shanties from a place of deep immersion in their roots. Our album <em>Departure</em> draws connections between shanties, hip hop, soca, ska, and dancehall so shanties become a living global form, not a museum piece.</p>
-        <p>Showcase artists at the 2023 Folk Music Ontario Conference and Folk Alliance International. Toured the UK in Summer 2026 — Sidmouth Folk Festival, FolkEast, Whitby Folk Week, and Shrewsbury.</p>
-      </div>
+          <div id="bio-short" class="bio-panel" style="max-width: 65ch;">
+            <p>Toronto's "delightfully unhinged and uniquely talented" shantymen. Musicians &amp; sailors challenging conventional understanding of sea shanties from a place of deep immersion in their roots. Their album <em>Departure</em> draws connections between shanties, hip hop, soca, ska, and dancehall so shanties become a living global form, not a museum piece.</p>
+            <p>Showcase artists at the 2023 Folk Music Ontario Conference and Folk Alliance International. Toured the UK in Summer 2026 — Sidmouth Folk Festival, FolkEast, Whitby Folk Week, and Shrewsbury.</p>
+          </div>
 
-      <div id="bio-oneliner" class="bio-panel" style="max-width: 65ch;">
-        <p style="font-size: 1.2rem; font-family: var(--font-display); font-style: italic; line-height: 1.6;">
-          Pressgang Mutiny are Toronto's "delightfully unhinged and uniquely talented" shantymen — musicians and sailors who've toured festivals across North America, Europe, and the Caribbean, and whose latest album Departure draws on hip hop, soca, ska, and dancehall to restore sea shanties as the multicultural, living global form they've always been.
-        </p>
-      </div>
+          <div id="bio-oneliner" class="bio-panel" style="max-width: 65ch;">
+            <p style="font-size: 1.2rem; font-family: var(--font-display); font-style: italic; line-height: 1.6;">
+              Pressgang Mutiny are Toronto's "delightfully unhinged and uniquely talented" shantymen — musicians and sailors who've toured festivals across North America, Europe, and the Caribbean, and whose latest album Departure draws on hip hop, soca, ska, and dancehall to restore sea shanties as the multicultural, living global form they've always been.
+            </p>
+          </div>
+        </div>
 
+        <div class="epk-bio-grid__photos">
+          <div class="epk-photo">
+            <img src="{{ "img/pgm-live-f1-3119.jpg" | relURL }}" alt="Pressgang Mutiny — live on the festival main stage">
+            <p class="epk-photo__label">Live — Main Stage</p>
+          </div>
+          <div class="epk-photo">
+            <img src="{{ "img/pgm-live-f2-1246.jpg" | relURL }}" alt="Pressgang Mutiny — live, arms raised">
+            <p class="epk-photo__label">Live</p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Listen -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 1.5rem;">Listen</h2>
+      <iframe title="Departure by Pressgang Mutiny — Bandcamp player" style="border: 0; width: 100%; max-width: 700px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=1665195755/size=large/bgcol=0c0a08/linkcol=2a8fd0/artwork=small/transparent=true/" seamless loading="lazy"><a href="https://pressgangmutiny.bandcamp.com/album/departure">Departure by Pressgang Mutiny</a></iframe>
+      <p style="color: var(--text-muted); margin-top: 1rem;">"Sally Rackett" (2026) — played by 132 stations and DJs across 30+ countries. Also on <a href="{{ site.Params.spotify | default "https://open.spotify.com/artist/6Rr4L8QzMOYLm3d9BjJyoT" }}" target="_blank" rel="noopener">Spotify</a> and <a href="https://pressgangmutiny.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a>.</p>
+    </section>
+
+    <!--
+    Live video section — staged, awaiting the Bristol edit.
+    When the video lands, uncomment and set the YouTube ID:
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 1.5rem;">Live</h2>
+      <div style="max-width: 700px; aspect-ratio: 16/9;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID" title="Pressgang Mutiny — live" frameborder="0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+    -->
 
     <!-- Press quotes -->
     <section style="margin-bottom: 4rem;">
@@ -68,7 +122,6 @@
           <p class="press-quote-source">40hz Sound &amp; Radio Show — Toronto</p>
         </li>
       </ul>
-      <p style="color: var(--text-muted); margin-top: 1rem;">"Sally Rackett" (2026) — played by 132 stations and DJs across 30+ countries.</p>
     </section>
 
     <!-- Festival history -->
@@ -104,20 +157,8 @@
       <h2 style="margin-bottom: 1.5rem;">Photos</h2>
       <div class="epk-photos">
         <div class="epk-photo">
-          <img src="{{ "img/band-hero.jpg" | relURL }}" alt="Pressgang Mutiny — the five of us">
-          <p class="epk-photo__label">Press Photo</p>
-        </div>
-        <div class="epk-photo">
-          <img src="{{ "img/pgm-live-f1-3119.jpg" | relURL }}" alt="Pressgang Mutiny — live on the festival main stage">
-          <p class="epk-photo__label">Live — Main Stage</p>
-        </div>
-        <div class="epk-photo">
           <img src="{{ "img/pgm-live-f1-1449.jpg" | relURL }}" alt="Pressgang Mutiny — full stage, live">
           <p class="epk-photo__label">Live — Full Stage</p>
-        </div>
-        <div class="epk-photo">
-          <img src="{{ "img/pgm-live-f2-1246.jpg" | relURL }}" alt="Pressgang Mutiny — live, arms raised">
-          <p class="epk-photo__label">Live</p>
         </div>
         <div class="epk-photo">
           <img src="{{ "img/pgm-live-f2-7703.jpg" | relURL }}" alt="Pressgang Mutiny — full band, live">
@@ -128,7 +169,7 @@
           <p class="epk-photo__label">Live — With Crowd</p>
         </div>
         <div class="epk-photo">
-          <img src="{{ "img/pgm-live-f1-4153.jpg" | relURL }}" alt="Pressgang Mutiny — Michael O'Grady at the mic">
+          <img src="{{ "img/pgm-live-f1-4153.jpg" | relURL }}" alt="Pressgang Mutiny — at the mic, live">
           <p class="epk-photo__label">Live — At the Mic</p>
         </div>
         <div class="epk-photo">
