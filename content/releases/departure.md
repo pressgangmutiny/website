@@ -9,7 +9,7 @@ links:
   - name: "Bandcamp"
     url: "https://pressgangmutiny.bandcamp.com/album/departure"
   - name: "Spotify"
-    url: "https://open.spotify.com/album/2RKvMBaolLMkxKe3yEkgOG"
+    url: "https://open.spotify.com/album/6eeqixhgKyvhtNt5I01hKx"
   - name: "Apple Music"
     url: "https://music.apple.com/ca/album/departure/1795155603"
   - name: "Amazon Music"
