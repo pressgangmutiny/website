@@ -1,5 +1,5 @@
 ---
 title: "About"
-description: "Toronto's shantymen. Musicians & sailors challenging conventional understanding of sea shanties from a place of deep immersion in their roots. Our album Departure draws connections between shanties, hip hop, soca, ska, and dancehall so shanties become a living global form, not a museum piece."
+description: "Pressgang Mutiny is a Toronto band remixing the sea shanty — tight vocal harmonies meet drum & bass, hip hop, reggae, dancehall and soca. Formed 2013. Fourth album Arrival records fall 2026 for April 2027 release."
 layout: "about"
 ---
