@@ -10,3 +10,11 @@
 /singingtattoo    https://threadripper-wsl.taila3ab90.ts.net/pressgang  302
 /singingtattoo/   https://threadripper-wsl.taila3ab90.ts.net/pressgang  302
 /singingtattoo/*  https://threadripper-wsl.taila3ab90.ts.net/pressgang  302
+
+# EPK — the page lives at /press-kit/ and the nav points there, but /epk/ is the
+# URL people type and the one old links use. It was returning 200 with the wrong
+# page, which reads as working and isn't. 301 and not 302: same site, stable
+# path, and we want search engines to collapse the two.
+/epk     /press-kit/  301
+/epk/    /press-kit/  301
+/epk/*   /press-kit/  301
