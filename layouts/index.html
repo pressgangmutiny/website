@@ -3,8 +3,10 @@
 <!-- ── Hero ─────────────────────────────────────────────────── -->
 <section class="hero hero-photo">
   <picture class="hero-bg">
+    <source media="(max-width: 760px)" type="image/webp" srcset="{{ "img/oct24/hero-tall-800.webp" | relURL }} 800w, {{ "img/oct24/hero-tall-1200.webp" | relURL }} 1200w" sizes="100vw">
     <source media="(max-width: 760px)" srcset="{{ "img/oct24/hero-tall.jpg" | relURL }}">
-    <img src="{{ "img/oct24/hero-wide.jpg" | relURL }}" alt="The four members of Pressgang Mutiny against a weathered wooden wall" loading="eager">
+    <source type="image/webp" srcset="{{ "img/oct24/hero-wide-1280.webp" | relURL }} 1280w, {{ "img/oct24/hero-wide-1920.webp" | relURL }} 1920w" sizes="100vw">
+    <img src="{{ "img/oct24/hero-wide.jpg" | relURL }}" alt="Pressgang Mutiny: Richard Kott, Josh Ludy, James McKie and Stefan Read against a weathered wooden wall" width="2400" height="1591" fetchpriority="high" decoding="async">
   </picture>
   <div class="hero-content">
     <h1>Pressgang<br>Mutiny</h1>
@@ -127,7 +129,7 @@
         <a href="{{ "about/" | relURL }}" class="btn btn-outline mt-3">More About Us</a>
       </div>
       <div class="about-image">
-        <img src="{{ "img/oct24/skyline.jpg" | relURL }}" alt="Pressgang Mutiny on the Toronto waterfront at dusk" loading="lazy">
+        <img src="{{ "img/oct24/skyline.jpg" | relURL }}" width="1800" height="1011" decoding="async" alt="Pressgang Mutiny on the Toronto waterfront at dusk" loading="lazy">
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 baseURL = 'https://www.pressgangmutiny.com/'
 languageCode = 'en-ca'
-title = 'Pressgang Mutiny | Sea Shanties'
+title = 'Pressgang Mutiny | Toronto Sea Shanty Band'
 enableRobotsTXT = true
 
 [markup]
