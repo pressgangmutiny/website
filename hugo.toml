@@ -1,6 +1,6 @@
 baseURL = 'https://www.pressgangmutiny.com/'
 languageCode = 'en-ca'
-title = 'Pressgang Mutiny | Sea Shanties'
+title = 'Pressgang Mutiny | Toronto Sea Shanty Band'
 enableRobotsTXT = true
 
 [markup]
@@ -9,7 +9,7 @@ enableRobotsTXT = true
       unsafe = true
 
 [params]
-  description = "Pressgang Mutiny is a Toronto band remixing the sea shanty. Tight vocal harmonies meet drum & bass, hip hop, reggae, dancehall and soca — a new sound for songs built for collective work, rooted in the tradition's multicultural origins."
+  description = "Toronto’s Pressgang Mutiny: tradition-bearers exploring the shared roots of shanties, reggae and hip hop. Hear Departure and see the band live."
   booking_email = "pressgangmutiny@gmail.com"
   bandcamp  = "https://pressgangmutiny.bandcamp.com"
   spotify   = "https://open.spotify.com/artist/7Hqytp4VVYmsYGJ9OGaVm8"

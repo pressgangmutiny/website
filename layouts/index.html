@@ -1,18 +1,20 @@
 {{ define "main" }}
 
 <!-- ── Hero ─────────────────────────────────────────────────── -->
-<section class="hero">
+<section class="hero hero-photo">
+  <picture class="hero-bg">
+    <source media="(max-width: 760px)" type="image/webp" srcset="{{ "img/oct24/hero-tall-800.webp" | relURL }} 800w, {{ "img/oct24/hero-tall-1200.webp" | relURL }} 1200w" sizes="100vw">
+    <source media="(max-width: 760px)" srcset="{{ "img/oct24/hero-tall.jpg" | relURL }}">
+    <source type="image/webp" srcset="{{ "img/oct24/hero-wide-1280.webp" | relURL }} 1280w, {{ "img/oct24/hero-wide-1920.webp" | relURL }} 1920w" sizes="100vw">
+    <img src="{{ "img/oct24/hero-wide.jpg" | relURL }}" alt="Pressgang Mutiny: Richard Kott, Josh Ludy, James McKie and Stefan Read against a weathered wooden wall" width="2400" height="1591" fetchpriority="high" decoding="async">
+  </picture>
   <div class="hero-content">
     <h1>Pressgang<br>Mutiny</h1>
     <p class="hero-tagline">Shanties remixed and reborn</p>
-    <p class="hero-eyebrow">New Single — Out Now</p>
     <div class="hero-actions">
-      <a href="https://lnk.to/pgmhillgullysally" target="_blank" rel="noopener" class="btn btn-primary">Hill and Gully / Sally Rackett</a>
-      <a href="{{ "tour/" | relURL }}" class="btn btn-outline">2026 UK Tour</a>
+      <a href="https://open.spotify.com/album/6eeqixhgKyvhtNt5I01hKx" target="_blank" rel="noopener" class="btn btn-primary">Listen to Departure</a>
+      <a href="{{ "press-kit/" | relURL }}" class="btn btn-outline">Booking / EPK</a>
     </div>
-  </div>
-  <div class="hero-image">
-    <img src="{{ "img/band-hero.jpg" | relURL }}" alt="Pressgang Mutiny performing live" loading="eager">
   </div>
 </section>
 
@@ -24,6 +26,25 @@
   </svg>
 </div>
 
+<!-- ── About ──────────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">The Band</p>
+        <h2>Tradition-bearers</h2>
+        <p class="lead">We are Pressgang Mutiny, Toronto’s “delightfully unhinged and uniquely talented” shantymen. We are musicians dedicated to challenging conventional understanding of sea shanties from a place of deep immersion in their roots.</p>
+        <p>We’ve travelled to discover where this work-song tradition came from, who sang it and why, and what it still has to say. Its often-erased Black and Caribbean roots inform the music we make today, from four-part harmony to our collaborations with reggae and hip hop artists.</p>
+        <p>We are tradition-bearers. We want our generation to contribute to the tradition and pass it on to people who will have their own ideas about what to do with it. That gives us plenty of room to experiment.</p>
+        <a href="{{ "about/" | relURL }}" class="btn btn-outline mt-3">Our Story</a>
+      </div>
+      <div class="about-image">
+        <img src="{{ "img/oct24/skyline.jpg" | relURL }}" width="1800" height="1011" decoding="async" alt="Pressgang Mutiny on the Toronto waterfront at dusk" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── Latest release ─────────────────────────────────────────── -->
 <section style="background: var(--bg-card);">
   <div class="container">
@@ -34,8 +55,9 @@
       <div class="about-text">
         <p class="section-label">Latest Release</p>
         <h2>Departure</h2>
-        <p class="lead">Our latest project draws connections between sea shanties, hip hop, soca, ska, and dancehall — the genres that share the same social, rhythmic, and communal roots. We believe <em>Departure</em> represents a first step in restoring our tradition's multicultural, trans-Atlantic origins.</p>
-        <p>Featuring collaborations with Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins of Big Sugar, Toronto hip hop artist Matt Somber, reggae MC Sunray Grennan, and many other great musicians we're privileged to share a city with.</p>
+        <p class="lead">On <em>Departure</em>, we explore the shared musical heritage of shanties, hip hop, soca, ska and dancehall with musicians who know those genres from the inside. Our voices meet samples, drum machines and new arrangements of songs we’ve spent years singing.</p>
+        <p>Listen to <a href="{{ "releases/hill-and-gully/" | relURL }}">“Hill and Gully / Sally Rackett”</a>: call and answer vocal lines with veteran Toronto reggae drummer and deejay Sunray Grennan make those connections audible. The album also features Carl Harvey of Toots and the Maytals, Al Cross and Terry Wilkins (Big Sugar’s original rhythm section), and melodic rapper, lyricist and vocalist Matt Somber.</p>
+        <p><strong>We’re back in the studio</strong>, recording our next album.</p>
         <div class="hero-actions mt-4">
           <a href="https://pressgang-mutiny.square.site" target="_blank" rel="noopener" class="btn btn-primary">Buy / Stream</a>
           <a href="{{ "music/" | relURL }}" class="btn btn-outline">All Releases</a>
@@ -48,6 +70,33 @@
         <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
         Listen on Spotify
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Videos ────────────────────────────────────────────────── -->
+<section>
+  <div class="container">
+    <p class="section-label">Watch</p>
+    <h2 style="margin-bottom: 2rem;">Videos</h2>
+    <div class="video-grid video-grid--three">
+      {{ range slice (dict "title" "Old Mick" "id" "JFr9pm9NyPE") (dict "title" "Roll Boys Roll" "id" "buIacMPxdPk") }}
+      <div class="video-item">
+        <p class="video-label">{{ .title }} · Official video</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/{{ .id }}?rel=0" title="Pressgang Mutiny — {{ .title }} (Official video)" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" style="border: 0;"></iframe>
+        </div>
+      </div>
+      {{ end }}
+      <div class="video-item">
+        <p class="video-label">Pour Boire Il Faut Vendre · Live at Shrewsbury</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube-nocookie.com/embed/XayX_PZhwpk?rel=0" title="Pressgang Mutiny — Pour Boire (Live)" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" style="border: 0;"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4">
+      <a href="{{ "videos/" | relURL }}" class="btn btn-outline">All Videos</a>
     </div>
   </div>
 </section>
@@ -65,8 +114,12 @@
         <cite class="rotating-quote-cite">David Francey</cite>
       </blockquote>
       <blockquote class="rotating-quote">
-        <p class="rotating-quote-text">"If you enjoy the likes of Kimber's Men, you'll have an absolute whale of a time."</p>
-        <cite class="rotating-quote-cite">Shire Folk</cite>
+        <p class="rotating-quote-text">"…a vital tradition of work songs that represents the world's first truly multicultural music."</p>
+        <cite class="rotating-quote-cite">Songlines ★★★★</cite>
+      </blockquote>
+      <blockquote class="rotating-quote">
+        <p class="rotating-quote-text">"Pressgang Mutiny really are doing them differently from the other modern bands I've heard."</p>
+        <cite class="rotating-quote-cite">London Celtic Punks</cite>
       </blockquote>
     </div>
   </div>
@@ -86,7 +139,7 @@
 <!-- ── Tour preview ───────────────────────────────────────────── -->
 <section style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
-    <p class="section-label">Next Port of Call</p>
+    <p class="section-label">Live</p>
     <h2 style="margin-bottom: 2rem;">Upcoming Shows</h2>
     <div style="margin-bottom: 2rem;">
       <div id="bit-events-widget-home">
@@ -95,71 +148,22 @@
            data-display-local-dates="false"
            data-display-past-dates="false"
            data-auto-style="false"
-           data-text-color="#e8e0d0"
-           data-link-color="#c8a84b"
+           data-text-color="#241e1a"
+           data-link-color="#9c5a32"
            data-background-color="transparent"
            data-display-limit="6"
            data-display-start-time="false"
-           data-link-text-color="#e8e0d0"
+           data-link-text-color="#f6f2eb"
            data-display-lineup="false"
            data-display-play-my-city="false"
-           data-popover-background-color="#1a1a1a"
+           data-popover-background-color="#f6f2eb"
            data-language="en"
         ></a>
       </div>
       <script defer src="https://widget.bandsintown.com/main.min.js" charset="utf-8"></script>
     </div>
     <div class="mt-4">
-      <a href="{{ "tour/" | relURL }}" class="btn btn-outline">All Tour Dates</a>
-    </div>
-  </div>
-</section>
-
-<!-- ── About ──────────────────────────────────────────────────── -->
-<section>
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <p class="section-label">About the Crew</p>
-        <h2>Remixing the Sea Shanty</h2>
-        <p class="lead">We are a Toronto band remixing the sea shanty. Tight vocal harmonies meet drum &amp; bass, hip hop, reggae, dancehall and soca — the beats drive the phrasing and energy of the singing, bringing a new sound to songs built for collective work.</p>
-        <p>Summer 2026 took us through 31 shows in 29 days across the UK — Sidmouth Folk Festival, FolkEast, Whitby Folk Week, Shrewsbury, and more.</p>
-        <a href="{{ "about/" | relURL }}" class="btn btn-outline mt-3">More About Us</a>
-      </div>
-      <div class="about-image">
-        <img src="{{ "img/band-portrait.jpg" | relURL }}" alt="Pressgang Mutiny — band portrait" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── Videos ────────────────────────────────────────────────── -->
-<section>
-  <div class="container">
-    <p class="section-label">Watch</p>
-    <h2 style="margin-bottom: 2rem;">Videos</h2>
-    <div class="video-grid">
-      <div class="video-item">
-        <p class="video-label">Official Video</p>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/JFr9pm9NyPE" title="Pressgang Mutiny — Old Mick [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="video-item">
-        <p class="video-label">Official Video</p>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/buIacMPxdPk" title="Pressgang Mutiny — Roll Boys Roll [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="video-item">
-        <p class="video-label">Live Performance</p>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/5j7EMug2Kho" title="Pressgang Mutiny — Roll Boys Roll (Live)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="mt-4">
-      <a href="{{ "videos/" | relURL }}" class="btn btn-outline">All Videos</a>
+      <a href="{{ "shows/" | relURL }}" class="btn btn-outline">All Dates</a>
     </div>
   </div>
 </section>
@@ -167,9 +171,9 @@
 <!-- ── Mailing list ──────────────────────────────────────────── -->
 <section style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container" style="text-align: center; max-width: 600px;">
-    <p class="section-label">Stay in the Loop</p>
-    <h2 style="margin-bottom: 0.5rem;">Join the Crew</h2>
-    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">New shows, releases, and dispatches from the high seas. No spam, ever.</p>
+    <p class="section-label">Keep in Touch</p>
+    <h2 style="margin-bottom: 0.5rem;">Get Our Emails</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">We’ll let you know when we’re playing and when there’s new music to hear.</p>
     <form class="mailing-form" style="flex-direction: row; gap: 0.5rem; max-width: 450px; margin: 0 auto;" action="https://pressgangmutiny.us8.list-manage.com/subscribe/post?u=bf2213ad837d7c4712729bcf7&amp;id=0e76cbc693&amp;f_id=00e5c9e1f0" method="POST" target="_blank">
       <input type="email" name="EMAIL" placeholder="your@email.com" required style="flex: 1;">
       <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_bf2213ad837d7c4712729bcf7_0e76cbc693" tabindex="-1" value=""></div>
@@ -187,7 +191,7 @@
       <img src="{{ "img/shanty-show-logo.jpg" | relURL }}" alt="The Shanty Show podcast" loading="lazy">
       <div>
         <h2>The Shanty Show</h2>
-        <p class="lead" style="font-size: 1rem;">A video and audio podcast featuring shanty singers and stories from around the world. We chat with the shanty world's best singers, performers, and historians — come along for the ride.</p>
+        <p class="lead" style="font-size: 1rem;">We talk with shanty singers and researchers about the songs they know, where they learned them and the people they learned them from. There’s usually some singing, too.</p>
         <p style="color: var(--text-muted); font-size: 0.9rem;">Available on YouTube, Spotify, and Apple Podcasts.</p>
         <a href="{{ "the-shanty-show/" | relURL }}" class="btn btn-outline mt-3">All Episodes</a>
       </div>
@@ -198,9 +202,9 @@
 <!-- ── Follow ──────────────────────────────────────────────────── -->
 <section style="border-top: 1px solid var(--border);">
   <div class="container" style="text-align: center;">
-    <p class="section-label">Come Aboard</p>
-    <h2 style="margin-bottom: 0.75rem;">Follow the Voyage</h2>
-    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Daily life on tour, new songs, and the odd road complaint — @pressgangmutiny everywhere.</p>
+    <p class="section-label">Social</p>
+    <h2 style="margin-bottom: 0.75rem;">Find Us Online</h2>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Clips from shows, songs we’re working on and what we get up to between them. Find us at @pressgangmutiny.</p>
     <div class="epk-actions" style="justify-content: center;">
       <a href="https://www.instagram.com/pressgangmutiny/" target="_blank" rel="noopener" class="btn btn-primary">Instagram</a>
       <a href="https://www.youtube.com/@pressgangmutiny" target="_blank" rel="noopener" class="btn btn-outline">YouTube</a>
@@ -214,7 +218,7 @@
   <div class="container" style="text-align: center;">
     <p class="section-label">Merch</p>
     <h2 style="margin-bottom: 0.75rem;">Shop</h2>
-    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">CDs, double vinyl, and t-shirts — straight from the crew.</p>
+    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Pick up a record or a t-shirt. Thanks for supporting the band.</p>
     <a href="https://pressgang-mutiny.square.site" target="_blank" rel="noopener" class="btn btn-primary">Visit the Shop</a>
   </div>
 </section>

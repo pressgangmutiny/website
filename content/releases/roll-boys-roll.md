@@ -2,7 +2,7 @@
 title: "Roll Boys Roll"
 year: "2026"
 label: "Believe Music"
-description: "A Trinidadian shanty reimagined — the lead track from Departure."
+description: "Our version of the Trinidadian shanty, from Departure."
 cover: "img/departure-cover.jpg"
 weight: 0
 links:

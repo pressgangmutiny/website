@@ -18,3 +18,8 @@
 /epk     /press-kit/  301
 /epk/    /press-kit/  301
 /epk/*   /press-kit/  301
+
+# Dates — /shows/ is the full live list (BandsInTown-fed). The old Tour page is
+# retired with the 2026 redesign; send old links and bookmarks to /shows/.
+/tour     /shows/  301
+/tour/    /shows/  301

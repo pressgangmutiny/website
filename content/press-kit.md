@@ -1,6 +1,6 @@
 ---
 title: "Press Kit"
-description: "Pressgang Mutiny press kit — biography, press quotes, festival history, high-resolution photos, and booking contact. Toronto's shantymen."
+description: "Pressgang Mutiny: tradition-bearers remixing the sea shanty. Bios, live footage, workshops, press photos and contacts for bookings and interviews."
 layout: "press-kit"
 hide_date: true
 ---

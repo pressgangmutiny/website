@@ -3,7 +3,6 @@
    Dark, warm, modern folk. No costume.
    ───────────────────────────────────────────────────────────── */
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 
 /* ── Variables ──────────────────────────────────────────────── */
 :root {
@@ -1692,3 +1691,80 @@ section {
   .epk-hero { grid-template-columns: 1fr; }
   .epk-bio-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ═══════════════════════════════════════════════════════════════
+   EARTHY THEME (preview, Nov 2026) — palette pulled from the
+   Oct 24 shoot: weathered board, leather, denim, charcoal.
+   Overrides only; delete this block to revert.
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --bg:           #ede7dd;
+  --bg-card:      #e3dacb;
+  --bg-elevated:  #f6f2eb;
+  --text:         #241e1a;
+  --text-muted:   #6b5d50;
+  --text-faint:   #a5968a;
+  --accent:       #9c5a32;
+  --accent-light: #b4693b;
+  --slate:        #5d6f82;
+  --border:       #d6cbbb;
+  --border-light: #c3b39d;
+}
+body { background-image: none; }
+.site-nav { background: rgba(237,231,221,0.94); }
+.nav-cta:hover { color: #f6f2eb !important; }
+.btn-primary, .btn-primary:hover { color: #f6f2eb; }
+.section-label { color: var(--slate); }
+.hero::before { display: none; }
+
+/* Full-bleed photo hero */
+.hero.hero-photo {
+  display: block;
+  position: relative;
+  min-height: 100svh;
+  padding-top: 0;
+  background: #241e1a;
+}
+.hero-photo .hero-bg, .hero-photo .hero-bg img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+}
+.hero-photo .hero-bg img { object-fit: cover; object-position: center 40%; }
+.hero-photo::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(to top, rgba(36,30,26,0.82) 0%, rgba(36,30,26,0.35) 38%, rgba(36,30,26,0) 62%);
+}
+.hero-photo .hero-content {
+  position: absolute; z-index: 2; left: 0; right: 0; bottom: 0;
+  padding: 0 var(--gutter) clamp(2.5rem, 7vh, 4.5rem);
+  padding-left: max(var(--gutter), calc((100vw - var(--max-w)) / 2 + var(--gutter)));
+}
+.hero-photo h1 { color: #f6f2eb; font-size: clamp(3rem, 7vw, 5.5rem); }
+.hero-photo .hero-tagline { color: #e7c9a8; font-size: 0.9rem; }
+.hero-photo .btn-outline { color: #f6f2eb; border-color: rgba(246,242,235,0.6); }
+.hero-photo .btn-outline:hover { border-color: #f6f2eb; color: #f6f2eb; }
+@media (max-width: 760px) {
+  .hero-photo .hero-bg img { object-position: center 30%; }
+}
+/* Photo vignettes were tuned for the dark theme; on cream they read as fog */
+.about-image::after, .aig-main::after, .aig-secondary > div::after, .aig-wide::after,
+.photo-gallery__item::after, .epk-photo::after, .member-photo::after { box-shadow: none; }
+/* Phones: size the hero to the portrait photo so nobody gets cropped off the edges */
+@media (max-width: 760px) {
+  .hero.hero-photo { min-height: 151vw; }
+  .hero-photo .hero-bg img { object-position: center top; }
+}
+/* Homepage: two official videos + one live clip in a row */
+.video-grid.video-grid--three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .video-grid.video-grid--three { grid-template-columns: 1fr; } }
+/* About page: gallery starts level with the first line of text, and photos show uncropped at their own proportions */
+.about-grid.about-grid--top { align-items: start; }
+.about-grid--top .about-text > :first-child { margin-top: 0; }
+.about-grid--top .about-image-gallery { gap: 0.6rem; }
+.about-grid--top .aig-main,
+.about-grid--top .aig-secondary > div,
+.about-grid--top .aig-wide { aspect-ratio: auto; overflow: visible; }
+.about-grid--top .aig-secondary { display: flex; flex-direction: column; gap: 0.6rem; }
+.about-grid--top .aig-main img,
+.about-grid--top .aig-secondary img,
+.about-grid--top .aig-wide img { height: auto; object-fit: initial; }

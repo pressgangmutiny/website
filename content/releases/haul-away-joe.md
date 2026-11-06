@@ -2,7 +2,7 @@
 title: "Haul Away Joe"
 year: "2025"
 label: "Believe Music"
-description: "The first single from Departure — a hauling shanty that set the tone for the album to come."
+description: "The first single from Departure. Watch the lyric video and sing along."
 cover: "img/departure-cover.jpg"
 weight: 0
 links:

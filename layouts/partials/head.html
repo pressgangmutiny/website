@@ -3,6 +3,12 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Pressgang Mutiny{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 <link rel="canonical" href="{{ .Permalink }}">
+<meta name="theme-color" content="#ede7dd">
+<meta name="robots" content="index, follow, max-image-preview:large">
+{{ if .IsHome }}
+<link rel="preload" as="image" type="image/webp" media="(min-width: 761px)" imagesrcset="{{ "img/oct24/hero-wide-1280.webp" | relURL }} 1280w, {{ "img/oct24/hero-wide-1920.webp" | relURL }} 1920w" imagesizes="100vw">
+<link rel="preload" as="image" type="image/webp" media="(max-width: 760px)" imagesrcset="{{ "img/oct24/hero-tall-800.webp" | relURL }} 800w, {{ "img/oct24/hero-tall-1200.webp" | relURL }} 1200w" imagesizes="100vw">
+{{ end }}
 
 <!-- Favicon: crown-and-anchor mark -->
 <link rel="icon" href="{{ "img/favicon-32.png" | relURL }}" sizes="32x32" type="image/png">
@@ -25,7 +31,10 @@
 {{ if .Params.cover -}}
 <meta property="og:image" content="{{ .Params.cover | absURL }}">
 {{ else -}}
-<meta property="og:image" content="{{ "img/band-hero.jpg" | absURL }}">
+<meta property="og:image" content="{{ "img/og-image.jpg" | absURL }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pressgang Mutiny, Toronto shanty band">
 {{ end -}}
 
 <!-- Twitter Card -->
@@ -36,8 +45,13 @@
 {{ if .Params.cover -}}
 <meta name="twitter:image" content="{{ .Params.cover | absURL }}">
 {{ else -}}
-<meta name="twitter:image" content="{{ "img/band-hero.jpg" | absURL }}">
+<meta name="twitter:image" content="{{ "img/og-image.jpg" | absURL }}">
 {{ end -}}
+
+<!-- Fonts: preconnect + stylesheet in the head instead of a render-blocking @import inside main.css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap">
 
 <!-- Styles -->
 <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
@@ -68,7 +82,8 @@ src="https://www.facebook.com/tr?id=832862114112264&ev=PageView&noscript=1"
   "name": "Pressgang Mutiny",
   "description": "{{ site.Params.description }}",
   "url": "{{ site.BaseURL }}",
-  "image": "{{ "img/band-hero.jpg" | absURL }}",
+  "image": "{{ "img/og-image.jpg" | absURL }}",
+  "email": "{{ site.Params.booking_email }}",
   "genre": ["sea shanties", "folk", "world music", "traditional"],
   "foundingDate": "2013",
   "foundingLocation": {
@@ -76,11 +91,17 @@ src="https://www.facebook.com/tr?id=832862114112264&ev=PageView&noscript=1"
     "name": "Toronto, Ontario, Canada"
   },
   "member": [
-    { "@type": "Person", "name": "James McKie" },
-    { "@type": "Person", "name": "Stefan Read" },
     { "@type": "Person", "name": "Richard Kott" },
-    { "@type": "Person", "name": "Josh Ludy" }
+    { "@type": "Person", "name": "Josh Ludy" },
+    { "@type": "Person", "name": "James McKie" },
+    { "@type": "Person", "name": "Stefan Read" }
   ],
+  "album": {
+    "@type": "MusicAlbum",
+    "name": "Departure",
+    "datePublished": "2026",
+    "url": "{{ "releases/departure/" | absURL }}"
+  },
   "sameAs": [
     "{{ site.Params.bandcamp }}",
     "{{ site.Params.spotify }}",
@@ -122,7 +143,7 @@ src="https://www.facebook.com/tr?id=832862114112264&ev=PageView&noscript=1"
   "@context": "https://schema.org",
   "@type": "PodcastSeries",
   "name": "The Shanty Show",
-  "description": "The world's foremost podcast about shanties — featuring conversations with the best shanty singers, scholars, and historians from around the world.",
+  "description": "A podcast about sea shanties, featuring conversations with the best shanty singers, scholars, and historians from around the world.",
   "url": "{{ .Permalink }}",
   "author": {
     "@type": "MusicGroup",
