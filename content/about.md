@@ -1,5 +1,5 @@
 ---
 title: "About"
-description: "Pressgang Mutiny is a Toronto band remixing the sea shanty — four-part harmonies meet drum & bass, hip hop, reggae, dancehall and soca. Formed 2013."
+description: "Meet Pressgang Mutiny, Toronto’s sea shanty band. Four singers, live instruments and beats, with more than a decade spent learning and sharing these songs."
 layout: "about"
 ---

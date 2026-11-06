@@ -2,7 +2,7 @@
 title: "Old Mick"
 year: "2026"
 label: "Believe Music"
-description: "Lead single from Departure. A rowdy, harmony-driven capstan shanty — traditional grit with a modern pulse."
+description: "Old Mick, from Departure. Watch the music video or hear the track below."
 cover: "img/departure-cover.jpg"
 weight: 0
 links:

@@ -2,7 +2,7 @@
 title: "Departure"
 year: "2026"
 label: "Believe Music"
-description: "The most recent chapter. Departure pushes into new waters while staying true to the tradition — deep-groove shanties, sharp harmonies, and a crew that's been sailing together for over a decade."
+description: "Our third album, made with Toronto musicians including Carl Harvey, Sunray Grennan and Matt Somber. Shanties with hip hop, soca, ska and dancehall."
 cover: "img/departure-cover.jpg"
 weight: 1
 links:

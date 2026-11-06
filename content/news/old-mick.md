@@ -1,23 +1,15 @@
 ---
-title: 'Pressgang Mutiny Drop "Old Mick" — A Sea-Soaked, Pint-Swinging Slice of Shanty Tradition'
-description: "Toronto's Pressgang Mutiny release Old Mick, the second advance single from their forthcoming album Departure, out March 13, 2026 on Slammin Media."
+title: 'Watch the video for "Old Mick"'
+description: 'Old Mick, from Pressgang Mutiny’s third album Departure. Watch the music video.'
 date: 2026-03-13
 ---
 
-Toronto's rowdiest keepers of the shanty flame, Pressgang Mutiny return with "Old Mick," the second advance single from their album *Departure*, out March 13, 2026 on Slammin Media.
+“Old Mick” is one of the songs on our third album, *Departure*. [Watch the video here](https://www.youtube.com/watch?v=JFr9pm9NyPE).
 
-Known for reviving the raw, working-class spirit of traditional sea shanties, the quartet pushes that legacy forward here, blending their signature four-part firepower with contemporary urban production. It lands like a deck-stomper, full of rhythm, grit, and the kind of communal lift built for crowded rooms.
+For this record, we worked with Toronto musicians including Carl Harvey of Toots and the Maytals, reggae MC Sunray Grennan and hip hop artist Matt Somber. We wanted to hear what we could make of these old songs together, using samples and drum machines alongside our voices.
 
-The sea shanty canon — a synthesis of African-American and Afro-Caribbean rhythmic call-and-answer forms combined with gritty Irish folk vocals — is wedded on this album with historical shanty samples, drum machine production, and musical collaborations with Toronto hip-hop, ska, and dancehall veterans and rising stars.
+The contributions of Black sailors and Caribbean and African-American work-song traditions are part of the music’s history. Working with musicians who know reggae, ska and hip hop from the inside gave us a way to explore those connections in the studio.
 
-The track pulls from its capstan and railroad song roots, built on call-and-response vocals shaped for muscle and momentum. Pressgang Mutiny deliver it with thick harmonies, tight phrasing, and a rhythmic push that feels equal parts archival and alive.
+[Listen to Departure on Bandcamp](https://pressgangmutiny.bandcamp.com/album/departure).
 
-*Departure* expands that story further. Featuring collaborations with ska and dancehall artists such as Carl Harvey of Toots and the Maytals, Sunray Grennan, and Toronto hip-hop artist Matt Somber, the project treats the shanty as a living global form rather than a museum piece.
-
-Across their twelve years together, Pressgang Mutiny have moved from Toronto pub sessions to major maritime and folk festivals across Canada, the United States, the United Kingdom, the Caribbean, France, Germany, Poland, and beyond.
-
-With *Departure* out and an international UK summer tour underway, 2026 is shaping up to be their busiest year yet.
-
----
-
-*For press inquiries, interviews, and review copies: [pressgangmutiny@gmail.com](mailto:pressgangmutiny@gmail.com)*
+For interviews and review copies: [pressgangmutiny@gmail.com](mailto:pressgangmutiny@gmail.com).

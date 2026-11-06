@@ -9,7 +9,7 @@ enableRobotsTXT = true
       unsafe = true
 
 [params]
-  description = "Pressgang Mutiny is a Toronto band remixing the sea shanty. Four-part harmonies meet drum & bass, hip hop, reggae, dancehall and soca — a new sound for songs built for collective work, rooted in the tradition's multicultural origins."
+  description = "Toronto sea shanty band Pressgang Mutiny: four-part harmony, hip hop, reggae and dancehall. Hear Departure, find a show or book the band."
   booking_email = "pressgangmutiny@gmail.com"
   bandcamp  = "https://pressgangmutiny.bandcamp.com"
   spotify   = "https://open.spotify.com/artist/7Hqytp4VVYmsYGJ9OGaVm8"

@@ -2,7 +2,7 @@
 title: "Across the Western Ocean"
 year: "2020"
 label: ""
-description: "Soaring four-part a cappella harmonies across 13 shanties and related songs."
+description: "Thirteen shanties and related songs, sung in four-part a cappella harmony."
 cover: "img/atwo-cover.jpg"
 weight: 2
 links:
