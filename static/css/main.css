@@ -1768,3 +1768,15 @@ body { background-image: none; }
 .about-grid--top .aig-main img,
 .about-grid--top .aig-secondary img,
 .about-grid--top .aig-wide img { height: auto; object-fit: initial; }
+
+/* Press & coverage grid (partials/press-coverage.html) */
+.press-cov { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.75rem; }
+.press-cov-card { display: flex; gap: 0.85rem; align-items: center; padding: 0.8rem 0.9rem; background: var(--bg-card); border: 1px solid color-mix(in srgb, var(--text-muted) 22%, transparent); border-radius: 3px; color: inherit; text-decoration: none; height: 100%; box-sizing: border-box; }
+a.press-cov-card:hover { border-color: var(--accent); }
+a.press-cov-card:hover .press-cov-outlet { color: var(--accent); }
+.press-cov-logo { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 6px; object-fit: contain; background: #fff; }
+.press-cov-mono { display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem; background: var(--accent); color: #fff; }
+.press-cov-text { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+.press-cov-outlet { font-weight: 600; }
+.press-cov-what { font-size: 0.92rem; }
+.press-cov-meta { font-size: 0.8rem; color: var(--text-muted); }

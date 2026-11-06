@@ -1,0 +1,20 @@
+{{/* Press & coverage grid from data/press.yaml, in file order.
+     Call with dict "era" ("departure" | "earlier" | "" for all). */}}
+{{ $era := .era | default "" }}
+{{ $items := site.Data.press }}
+{{ if $era }}{{ $items = where $items "era" $era }}{{ end }}
+<ul class="press-cov">
+  {{ range $items }}
+  <li class="press-cov-item">
+    {{ if .url }}<a class="press-cov-card" href="{{ .url }}" target="_blank" rel="noopener">{{ else }}<div class="press-cov-card">{{ end }}
+      {{ if .logo }}<img class="press-cov-logo" src="{{ printf "img/press/%s" .logo | relURL }}" alt="{{ .outlet }} logo" width="44" height="44" loading="lazy">
+      {{ else }}<span class="press-cov-logo press-cov-mono" aria-hidden="true">{{ substr (replaceRE "^The " "" .outlet) 0 1 }}</span>{{ end }}
+      <span class="press-cov-text">
+        <span class="press-cov-outlet">{{ .outlet }}</span>
+        <span class="press-cov-what">{{ .what }}</span>
+        <span class="press-cov-meta">{{ .type }} · {{ .where }}</span>
+      </span>
+    {{ if .url }}</a>{{ else }}</div>{{ end }}
+  </li>
+  {{ end }}
+</ul>

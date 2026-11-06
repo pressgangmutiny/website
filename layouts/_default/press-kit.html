@@ -111,6 +111,15 @@
       </div>
     </section>
 
+    <!-- Press & coverage (data/press.yaml) -->
+    <section style="margin-bottom: 4rem;">
+      <h2 style="margin-bottom: 0.5rem;">Press &amp; Coverage</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Reviews, features, interviews and radio for <em>Departure</em> and its singles.</p>
+      {{ partial "press-coverage.html" (dict "era" "departure") }}
+      <h3 style="margin: 2.5rem 0 1rem;">Earlier coverage</h3>
+      {{ partial "press-coverage.html" (dict "era" "earlier") }}
+    </section>
+
     <!-- Press quotes -->
     <section style="margin-bottom: 4rem;">
       <h2 style="margin-bottom: 1.5rem;">Press Quotes</h2>

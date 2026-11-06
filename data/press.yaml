@@ -1,0 +1,242 @@
+# Press & coverage — single source for the EPK "Press & Coverage" section and
+# the Departure press page (shortcode press-coverage). Newest first within
+# each era. `logo` = file in static/img/press/ (omit to show a monogram).
+# `era`: departure (2025-26 campaign) or earlier. No url = listed unlinked.
+- outlet: CIVL Radio
+  what: Interview, Cam The Man Show
+  type: Radio
+  where: Canada
+  date: 2026-10-13
+  era: departure
+  logo: civl.png
+- outlet: BBC Radio Suffolk
+  what: Interview during FolkEast
+  type: Radio
+  where: UK
+  date: 2026-08-17
+  era: departure
+  logo: bbc.png
+- outlet: London Celtic Punks
+  what: Album review, Departure
+  type: Review
+  where: UK
+  date: 2026-08-02
+  era: departure
+  url: https://londoncelticpunks.wordpress.com/2026/08/02/pressgang-mutiny-departure/
+  logo: londoncelticpunks.png
+- outlet: That Eric Alper
+  what: Departure feature
+  type: Feature
+  where: Canada
+  date: 2026-07-05
+  era: departure
+  url: https://www.thatericalper.com/2026/07/05/toronto-sea-shanty-group-pressgang-mutiny-set-sail-with-new-album-departure/
+- outlet: Marc Schuster
+  what: 'Interview: Something Innately Powerful'
+  type: Interview
+  where: USA
+  date: 2026-04-13
+  era: departure
+  url: https://marcschuster.com/2026/04/13/something-innately-powerful-a-conversation-with-pressgang-mutiny/
+  logo: marcschuster.png
+- outlet: Concertmonkey
+  what: Departure announcement
+  type: News
+  where: Belgium
+  date: 2026-04-13
+  era: departure
+  url: https://www.concertmonkey.be/news/departure-new-album-torontos-shantymen-pressgang-mutiny
+- outlet: Americana UK
+  what: Folk Tracks Roundup, March 2026
+  type: Review
+  where: UK
+  date: 2026-03-19
+  era: departure
+  url: https://americana-uk.com/folk-tracks-roundup-march-2026
+  logo: americanauk.png
+- outlet: Indie Pulse
+  what: Departure feature
+  type: Feature
+  where: USA
+  date: 2026-03-16
+  era: departure
+  url: https://indiepulsemusic.com/2026/03/16/pressgang-mutiny-set-sail-with-departure-sailing-centuries-old-songs-straight-into-the-modern-world/
+  logo: indiepulse.png
+- outlet: Soundville
+  what: Departure review
+  type: Review
+  where: Spain
+  date: 2026-03-13
+  era: departure
+  url: https://soundvilleblog.com/2026/03/13/the-new-album-departure-by-pressgang-mutiny-will-open-up-a-new-space-for-you-centuries-old-songs-with-a-modern-charm/
+  logo: soundville.png
+- outlet: Music Crowns
+  what: Departure feature
+  type: Feature
+  where: UK
+  date: 2026-03-13
+  era: departure
+  url: https://www.musiccrowns.org/new-music/pressgang-mutiny-set-sail-with-departure-sailing-centuries-old-songs-straight-into-the-modern-world/
+  logo: musiccrowns.png
+- outlet: V13
+  what: '"Roll Boys Roll" video premiere'
+  type: Premiere
+  where: USA
+  date: 2026-03-01
+  era: departure
+  url: https://v13.net/2026/03/pressgang-mutiny-roll-boys-roll-video-premiere/
+  logo: v13.png
+- outlet: CBC Radio
+  what: Radio feature
+  type: Radio
+  where: Canada
+  date: 2026-01-25
+  era: departure
+  url: https://www.cbc.ca/listen/live-radio/1-193/clip/d20260125-saturday-january-25-2026
+  logo: cbc.png
+- outlet: London Celtic Punks
+  what: '"Old Mick" single'
+  type: Review
+  where: UK
+  date: 2026-01-22
+  era: departure
+  url: https://londoncelticpunks.wordpress.com/2026/01/22/new-single-pressgang-mutiny-old-mick-2026/
+  logo: londoncelticpunks.png
+- outlet: Underdog Fanzine
+  what: '"Old Mick" single'
+  type: News
+  where: Germany
+  date: 2026-01-18
+  era: departure
+  url: https://www.underdog-fanzine.de/2026/01/18/pressgang-mutiny-old-mick/
+- outlet: Rockera Magazine
+  what: '"Old Mick" single'
+  type: News
+  where: USA
+  date: 2026-01-16
+  era: departure
+  url: https://rockeramagazine.com/pressgang-mutiny-old-mick/
+  logo: rockera.png
+- outlet: RAMzine
+  what: '"Old Mick" single'
+  type: News
+  where: UK
+  date: 2026-01-09
+  era: departure
+  url: https://ramzine.co.uk/news/pressgang-mutiny-drop-new-shanty-single-old-mick/
+  logo: ramzine.png
+- outlet: Canadian Beats
+  what: '"Old Mick" single'
+  type: News
+  where: Canada
+  date: 2026-01-09
+  era: departure
+  url: https://canadianbeats.ca/2026/01/09/pressgang-mutiny-shares-new-single-old-mick/
+  logo: canadianbeats.png
+- outlet: Jersey Beat
+  what: Departure review
+  type: Review
+  where: USA
+  date: 2026-01-01
+  era: departure
+  url: https://www.jerseybeat.com/paulsilver.html
+- outlet: MusicOntario
+  what: Member Spotlight, Departure
+  type: Feature
+  where: Canada
+  date: 2026-01-01
+  era: departure
+  url: https://music-ontario.ca/news/spotlight/read,article/18198/musicontario-member-spotlight-pressgang-mutiny-s-departure
+- outlet: Exclaim!
+  what: Feature
+  type: Feature
+  where: Canada
+  date: 2026-01-01
+  era: departure
+- outlet: Cleveland.com
+  what: Feature
+  type: Feature
+  where: USA
+  date: 2026-01-01
+  era: departure
+- outlet: The Alternate Root
+  what: Feature
+  type: Feature
+  where: USA
+  date: 2026-01-01
+  era: departure
+  logo: alternateroot.png
+- outlet: Great American Folk Show
+  what: Interview, Prairie Public Radio
+  type: Radio
+  where: USA
+  date: 2026-01-01
+  era: departure
+  logo: prairiepublic.png
+- outlet: Toronto Guardian
+  what: Interview
+  type: Interview
+  where: Canada
+  date: 2026-01-01
+  era: departure
+  logo: torontoguardian.png
+- outlet: CIUT 89.5 FM
+  what: Interview
+  type: Radio
+  where: Canada
+  date: 2026-01-01
+  era: departure
+  logo: ciut.png
+- outlet: CKCU FM
+  what: Interview, Refolkus
+  type: Radio
+  where: Canada
+  date: 2025-03-31
+  era: earlier
+  url: https://cod.ckcufm.com/programs/635/69578.html
+  logo: ckcu.png
+- outlet: RootsMusic.ca
+  what: Across the Western Ocean feature
+  type: Feature
+  where: Canada
+  date: 2021-03-20
+  era: earlier
+  url: https://www.rootsmusic.ca/2021/03/20/sea-shanty-band-pressgang-mutiny-could-not-be-releasing-an-album-at-a-more-opportune-time/
+- outlet: Billboard Canada
+  what: Five Questions With Stefan Read
+  type: Interview
+  where: Canada
+  date: 2021-01-01
+  era: earlier
+  url: https://ca.billboard.com/fyi/five-questions-%E2%80%A6-pressgang-mutiny%E2%80%99s-stefan-read
+  logo: billboardca.png
+- outlet: Songlines
+  what: Across the Western Ocean, ★★★★
+  type: Review
+  where: UK
+  date: 2020-12-01
+  era: earlier
+  url: https://www.songlines.co.uk/reviews/across-the-western-ocean
+  logo: songlines.png
+- outlet: Liverpool Sound and Vision
+  what: Across the Western Ocean review
+  type: Review
+  where: UK
+  date: 2020-08-25
+  era: earlier
+  url: https://liverpoolsoundandvision.co.uk/2020/08/25/pressgang-mutiny-across-the-western-ocean-album-review
+- outlet: Folking.com
+  what: Across the Western Ocean announcement
+  type: News
+  where: UK
+  date: 2020-08-11
+  era: earlier
+  url: https://folking.com/pressgang-mutiny-announce-their-second-album/
+  logo: folking.png
+- outlet: The Living Tradition
+  what: Across the Western Ocean review
+  type: Review
+  where: UK
+  date: 2020-06-01
+  era: earlier
+  url: https://livingtradition.co.uk/webrevs/pressgangmutinycd003.htm
