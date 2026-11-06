@@ -1757,3 +1757,14 @@ body { background-image: none; }
 /* Homepage: two official videos + one live clip in a row */
 .video-grid.video-grid--three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 @media (max-width: 900px) { .video-grid.video-grid--three { grid-template-columns: 1fr; } }
+/* About page: gallery starts level with the first line of text, and photos show uncropped at their own proportions */
+.about-grid.about-grid--top { align-items: start; }
+.about-grid--top .about-text > :first-child { margin-top: 0; }
+.about-grid--top .about-image-gallery { gap: 0.6rem; }
+.about-grid--top .aig-main,
+.about-grid--top .aig-secondary > div,
+.about-grid--top .aig-wide { aspect-ratio: auto; overflow: visible; }
+.about-grid--top .aig-secondary { display: flex; flex-direction: column; gap: 0.6rem; }
+.about-grid--top .aig-main img,
+.about-grid--top .aig-secondary img,
+.about-grid--top .aig-wide img { height: auto; object-fit: initial; }
