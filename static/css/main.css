@@ -1795,3 +1795,8 @@ a.press-cov-card:hover .press-cov-outlet { color: var(--accent); }
 /* Homepage videos: keep embeds aligned even if a label wraps */
 .video-grid--three .video-item { display: flex; flex-direction: column; }
 .video-grid--three .video-label { flex: 1 0 auto; display: flex; align-items: flex-end; }
+
+/* Homepage full-width waterfront photo band */
+.photo-band { width: 100%; aspect-ratio: 21/9; overflow: hidden; }
+.photo-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
+@media (max-width: 700px) { .photo-band { aspect-ratio: 4/3; } .photo-band img { object-position: 30% 40%; } }
