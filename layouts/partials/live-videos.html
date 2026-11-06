@@ -1,0 +1,9 @@
+{{ range slice (dict "title" "Pour Boire" "id" "1GvGVfCNicf70vALFYd46Oww_HvqwQ4E9") (dict "title" "Poor Johnny" "id" "1mLsLGG_h2sF00bx6P4yt2Kieq25lYgzH") }}
+<div class="video-item">
+  <p class="video-label">{{ .title }} · Live</p>
+  <div class="video-embed">
+    <iframe src="https://drive.google.com/file/d/{{ .id }}/preview" title="Pressgang Mutiny — {{ .title }} (Live)" allow="autoplay; fullscreen" allowfullscreen loading="lazy" style="border: 0;"></iframe>
+  </div>
+  <p style="margin-top: 0.75rem;"><a href="https://drive.google.com/file/d/{{ .id }}/view" target="_blank" rel="noopener">Open {{ .title }} in Google Drive</a></p>
+</div>
+{{ end }}

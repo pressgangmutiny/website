@@ -77,26 +77,9 @@
 <section>
   <div class="container">
     <p class="section-label">Watch</p>
-    <h2 style="margin-bottom: 2rem;">Hear Us Live &amp; on Record</h2>
+    <h2 style="margin-bottom: 2rem;">Hear Us Live</h2>
     <div class="video-grid">
-      <div class="video-item">
-        <p class="video-label">Live Performance</p>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/5j7EMug2Kho" title="Pressgang Mutiny — Roll Boys Roll (Live)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="video-item">
-        <p class="video-label">Official Video</p>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/JFr9pm9NyPE" title="Pressgang Mutiny — Old Mick [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
-      <div class="video-item">
-        <p class="video-label">Official Video</p>
-        <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/buIacMPxdPk" title="Pressgang Mutiny — Roll Boys Roll [Official Video]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </div>
+      {{ partial "live-videos.html" . }}
     </div>
     <div class="mt-4">
       <a href="{{ "videos/" | relURL }}" class="btn btn-outline">All Videos</a>
