@@ -1754,3 +1754,6 @@ body { background-image: none; }
   .hero.hero-photo { min-height: 151vw; }
   .hero-photo .hero-bg img { object-position: center top; }
 }
+/* Homepage: two official videos + one live clip in a row */
+.video-grid.video-grid--three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+@media (max-width: 900px) { .video-grid.video-grid--three { grid-template-columns: 1fr; } }
