@@ -6,7 +6,7 @@ date: 2026-03-13
 
 “Old Mick” is one of the songs on our third album, *Departure*. [Watch the video here](https://www.youtube.com/watch?v=JFr9pm9NyPE).
 
-For this record, we worked with Toronto musicians including Carl Harvey of Toots and the Maytals, reggae deejay Sunray Grennan and melodic rapper, lyricist and vocalist Matt Somber. We wanted to hear what we could make of these old songs together, using samples and drum machines alongside our voices.
+For this record, we worked with Toronto musicians including Carl Harvey of Toots and the Maytals, veteran Toronto reggae drummer and deejay Sunray Grennan and melodic rapper, lyricist and vocalist Matt Somber. We wanted to hear what we could make of these old songs together, using samples and drum machines alongside our voices.
 
 The contributions of Black sailors and Caribbean and African-American work-song traditions are part of the music’s history. Working with musicians who know reggae, ska and hip hop from the inside gave us a way to explore those connections in the studio.
 
