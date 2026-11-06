@@ -1786,3 +1786,8 @@ a.press-cov-card:hover .press-cov-outlet { color: var(--accent); }
 .onstage-grid figure { margin: 0; aspect-ratio: 3/2; overflow: hidden; }
 .onstage-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
 @media (max-width: 700px) { .onstage-grid { grid-template-columns: 1fr; } }
+.onstage-grid--single { grid-template-columns: 1fr; }
+.onstage-grid--single figure { aspect-ratio: 16/9; }
+/* Homepage: two live photos stacked beside Tradition-bearers */
+.about-image-stack { display: flex; flex-direction: column; gap: 0.5rem; }
+.about-image-stack img { width: 100%; aspect-ratio: 3/2; object-fit: cover; display: block; }
