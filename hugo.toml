@@ -9,7 +9,7 @@ enableRobotsTXT = true
       unsafe = true
 
 [params]
-  description = "Toronto sea shanty band Pressgang Mutiny: four-part harmony, hip hop, reggae and dancehall. Hear Departure, find a show or book the band."
+  description = "Toronto’s Pressgang Mutiny: tradition-bearers exploring the shared roots of shanties, reggae and hip hop. Hear Departure and see the band live."
   booking_email = "pressgangmutiny@gmail.com"
   bandcamp  = "https://pressgangmutiny.bandcamp.com"
   spotify   = "https://open.spotify.com/artist/7Hqytp4VVYmsYGJ9OGaVm8"

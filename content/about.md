@@ -1,5 +1,5 @@
 ---
 title: "About"
-description: "Meet Pressgang Mutiny, Toronto’s sea shanty band. Four singers, live instruments and beats, with more than a decade spent learning and sharing these songs."
+description: "Meet Pressgang Mutiny: Toronto shantymen and tradition-bearers, learning from the singers before us and contributing music of our own."
 layout: "about"
 ---
