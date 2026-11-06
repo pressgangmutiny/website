@@ -1,0 +1,105 @@
+{{ define "main" }}
+{{/* Full list of dates, upcoming and past. Not in the menu; linked from
+     applications. Static list is built from data/shows.json (BandsInTown
+     snapshot via deploy/make_shows_data.py); the script below refreshes it
+     live from the BandsInTown public API so new dates appear without a deploy. */}}
+<style>
+  .shows-year { margin: 2.5rem 0 0.75rem; font-size: 1.25rem; }
+  .shows-list { list-style: none; margin: 0; padding: 0; }
+  .shows-list li { display: grid; grid-template-columns: 7.5rem 1fr auto; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid color-mix(in srgb, var(--text-muted) 25%, transparent); align-items: baseline; }
+  .shows-date { color: var(--text-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .shows-name a { color: inherit; text-decoration: none; }
+  .shows-name a:hover { color: var(--accent); }
+  .shows-place { color: var(--text-muted); text-align: right; }
+  @media (max-width: 640px) {
+    .shows-list li { grid-template-columns: 1fr; gap: 0.15rem; }
+    .shows-place { text-align: left; }
+  }
+</style>
+<div class="page-top-pad">
+  <div class="container">
+    <div class="page-header" style="border-bottom: none; margin-bottom: 0; padding-bottom: 1rem;">
+      <p class="section-label">Live</p>
+      <h1>Shows</h1>
+      <p style="color: var(--text-muted); max-width: 60ch; margin-top: 0.75rem;">
+        Every date we've listed, newest first. For booking: <a href="mailto:{{ site.Params.booking_email }}">{{ site.Params.booking_email }}</a>
+      </p>
+    </div>
+
+    {{ $today := now.Format "2006-01-02" }}
+    {{ $all := site.Data.shows }}
+    {{ $up := where $all "date" "ge" $today }}
+    {{ $past := where $all "date" "lt" $today }}
+
+    <h2 style="margin-top: 1.5rem;">Upcoming</h2>
+    <ul class="shows-list" id="shows-upcoming">
+      {{ range sort $up "date" "asc" }}
+      <li><span class="shows-date">{{ (time .date).Format "2 Jan 2006" }}</span><span class="shows-name"><a href="{{ .url }}" rel="noopener">{{ .name }}</a></span><span class="shows-place">{{ .place }}</span></li>
+      {{ else }}
+      <li class="shows-none"><span style="grid-column: 1 / -1; color: var(--text-muted);">New dates coming soon.</span></li>
+      {{ end }}
+    </ul>
+
+    <h2 style="margin-top: 3rem;">Past</h2>
+    <div id="shows-past">
+      {{ $byYear := slice }}
+      {{ range $past }}{{ $byYear = $byYear | append (substr .date 0 4) }}{{ end }}
+      {{ range (uniq $byYear) }}
+        {{ $y := . }}
+        <h3 class="shows-year">{{ $y }}</h3>
+        <ul class="shows-list">
+          {{ range $past }}{{ if eq (substr .date 0 4) $y }}
+          <li><span class="shows-date">{{ (time .date).Format "2 Jan" }}</span><span class="shows-name">{{ .name }}</span><span class="shows-place">{{ .place }}</span></li>
+          {{ end }}{{ end }}
+        </ul>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var API = "https://rest.bandsintown.com/artists/Pressgang%20Mutiny/events?app_id=js_www.pressgangmutiny.com&date=all";
+  var REG = {"Ontario":"ON","08":"ON","Nova Scotia":"NS","New Brunswick":"NB","Quebec":"QC","Québec":"QC"};
+  var MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function name(e) {
+    var n = (e.title || e.venue.name || "").trim();
+    n = n.replace(/^Pressgang Mutiny Live at /i, "");
+    return n;
+  }
+  function place(v) {
+    var c = (v.city || "").trim().replace("Downtown Toronto", "Toronto"), r = (v.region || "").trim(), k = (v.country || "").trim(), t;
+    r = REG[r] || r;
+    if (k === "Canada") t = (/^[A-Za-z]{1,3}$/.test(r)) ? r : "Canada";
+    else if (k === "United States") t = /^[A-Za-z]+$/.test(r) ? r : "USA";
+    else if (k === "United Kingdom") t = "UK";
+    else t = k;
+    return [c, t].filter(Boolean).join(", ") || "Online";
+  }
+  function fmt(d, withYear) { var p = d.split("-"); return (+p[2]) + " " + MON[+p[1] - 1] + (withYear ? " " + p[0] : ""); }
+  function row(e, withYear, link) {
+    var n = esc(e.name);
+    if (link) n = '<a href="' + esc(e.url) + '" rel="noopener">' + n + '</a>';
+    return '<li><span class="shows-date">' + fmt(e.date, withYear) + '</span><span class="shows-name">' + n + '</span><span class="shows-place">' + esc(e.place) + '</span></li>';
+  }
+  fetch(API).then(function (r) { if (!r.ok) throw r; return r.json(); }).then(function (d) {
+    if (!Array.isArray(d) || !d.length) return;
+    var t = new Date(), today = t.getFullYear() + "-" + ("0" + (t.getMonth() + 1)).slice(-2) + "-" + ("0" + t.getDate()).slice(-2);
+    var ev = d.map(function (e) { return { date: e.datetime.slice(0, 10), name: name(e), place: place(e.venue), url: e.url.split("?")[0] }; });
+    var up = ev.filter(function (e) { return e.date >= today; }).sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+    var past = ev.filter(function (e) { return e.date < today; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    document.getElementById("shows-upcoming").innerHTML = up.length
+      ? up.map(function (e) { return row(e, true, true); }).join("")
+      : '<li class="shows-none"><span style="grid-column: 1 / -1; color: var(--text-muted);">New dates coming soon.</span></li>';
+    var html = "", year = "";
+    past.forEach(function (e) {
+      var y = e.date.slice(0, 4);
+      if (y !== year) { if (year) html += "</ul>"; html += '<h3 class="shows-year">' + y + '</h3><ul class="shows-list">'; year = y; }
+      html += row(e, false, false);
+    });
+    if (year) html += "</ul>";
+    document.getElementById("shows-past").innerHTML = html;
+  }).catch(function () { /* keep the built list */ });
+})();
+</script>
+{{ end }}
